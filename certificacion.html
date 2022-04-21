@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Procesos necesarios para la certificación del funcionamiento
+    eficiente de la red de fibra óptica, bajo los estándares TIA y NECA/FOA 301, utilizando un OTDR.">
+    <meta name="keywords" content="Certificación, funcionamiento, calidad, OTDR">
+    <meta name= "author" content="Karina Bierkamp">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@284&family=PT+Sans&family=Roboto+Serif:ital,wght@1,500&display=swap');
+        </style>
+    <title>Etapa de Certificación de la Red</title>
+    <link rel="shorcut icon" href="favicon.png">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/Optical3.png"  height="65px" class="d-inline-block align-top" alt="Logo">
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav text-center">
+          <a class="nav-item nav-link" href="levantamiento.html">Levantamiento </a>
+          <a class="nav-item nav-link" href="diseño.html">Diseño</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Instalación
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="conductos-subconductos.html">Conductos y Subconductos</a></li>
+              <li><a class="dropdown-item" href="conductos-subconductos.html#lubricante">Lubricante</a></li>
+              <li><a class="dropdown-item" href="traccion.html">Cinta y Caja de Tracción</a></li>
+              <li><a class="dropdown-item" href="empalme.html">Empalme</a></li>
+              <li><a class="dropdown-item" href="instalacion.html#exteriores">En Exteriores</a></li>
+              <li><a class="dropdown-item" href="instalacion.html#interiores">En Interiores</a></li>
+              <li><a class="dropdown-item" href="terminacion.html">Terminación de Fibra</a></li>
+            </ul>
+          </li>
+          <a class="nav-item nav-link active" href="#">Certificación</a>
+          <a class="nav-item nav-link" href="software.html">Optical Decisions</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <header class="header-certificacion">
+                <h1 class="titulo-header"><strong>Etapa de Certificación de la Red</strong> </h1><br>
+                <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                    style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: #fff;"></path>
+                </svg></div>
+    </header>
+    <nav class="nav flex-column float-start sticky-top d-none d-xl-block d-lg-block w-40" style="background-color:  rgb(8, 7, 58)">
+      <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;"> --- </a>
+        <a class="nav-link" href="#"style="color:rgb(8, 7, 58) ;"> --- </a>
+      <a class="nav-link active text-light" aria-current="page" href="certificacion.html" style="font-size:x-large"><b> Certificación </a>
+      <a class="nav-link text-light" href="#item-1"style="font-size: large;">Beneficios de <br> certificar tu red</a>
+      <a class="nav-link text-light" href="#item-2"style="font-size: large;">Pérdidas vs. <br> Certificación</a>
+      <a class="nav-link text-light" href="#item-3"style="font-size: large;">Procedimiento con OTDR</a>
+      <a class="nav-link text-light" href="#item-4"style="font-size: large;">Fuente de luz y <br> Power Meter</a>
+      <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+      <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+      <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+        <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+        <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+        <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+        <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+        <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+    </nav>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-sm-10">
+                <main> 
+                  La certificación de las redes es una etapa importante en todo el proceso de puesta en funcionamiento, es allí donde se garantiza la calidad del trabajo realizado.
+                  Las técnicas de verificación de fibra óptica son el conjunto de acciones y pruebas para comprobar que el cable óptico y su instalación cumplen con los requisitos mínimos para que las comunicaciones puedan realizarse acorde a normas y estándares industriales.     
+                </main> <br><br>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-sm-8">
+              <h4 id="item-1">Beneficios de certificar tu red</h4> <br><br>
+              <p class="pasos-principales">
+                La tarea de conocer si las redes cumplen con los parámetros y normatividades a nivel técnico es un proceso beneficioso de manera inmediata y a largo plazo repercutiendo directamente en las actividades y calidad de los servicios ofrecidos.
+                <br> <br>
+                <ol style="list-style-type: decimal;">
+                  <li><b>Incremento de la vida útil: </b>Una red a nivel físico puede funcionar por más de 15 años sin presentar inconvenientes, por lo general se debe cumplir con una conducción adecuada, ausencia de ruidos y el uso de las canalizaciones adecuadas.</li>
+                  <li><b>Aporta mayor seguridad: </b>A nivel de hardware el cumplimiento de las normativas y estándares puede evitar pérdidas por factores externos como las descargas eléctricas, interferencias e inclusive daños por animales.</li>
+                  <li><b>Mayor eficiencia: </b>Al diagnosticar el estado de las fibras se pueden corregir fallas debidas a desgastes por factores externos o por el uso de las mismas.</li>
+                </ol>
+              </p>
+              <h4 id="item-2">Pérdidas vs. Certificación</h4> <br><br>
+              <p class="pasos-principales"> 
+                <b>Pérdidas de Potencia</b> <br>
+                La medición de pérdidas de potencia, emplea como instrumentos de medida equipos power meter, los cuales permiten obtener el valor absoluto de potencia en dBm referenciada a 1 miliwatio de potencia. <br><br>
+                <b>Certificación</b> <br><br>
+                Los procedimientos de certificación de fibra óptica son aquellas pruebas que se llevan a cabo para medir que el cable óptico en particular, y la instalación en general siguen las normativas según los estándares industriales. Para tal fín ase emplean equipos OTDR y equipos de inspección como miscroscopios ópticos. <br>
+                Los procesos de certificación permiten medir algunos parámetros específicos como: <br> <br>
+                <ol style="list-style-type: circle;">
+                  <li>Potencia</li>
+                  <li>Distancia</li>
+                  <li>Normativa</li>
+                  <li>Reflectometría</li>
+                </ol>
+              </p>
+              <h4 id="item-3">Procedimiento con OTDR</h4> <br><br>
+              <p class="pasos-principales">
+                En este apartado se explicará con brevedad el mejor procedimiento para realizar pruebas, con un reflectómetro de dominio de tiempo 
+                 óptico (OTDR), las cuales se pueden realizar para verificar la calidad de la instalación a lo largo de 
+                  toda su longitud, o para la solución de problemas, ya que se permite determinar información como la 
+                   atenuación de la fibra, las perdidas en los empalmes, conectores, y localización de anomalías. <br><br>
+                  El siguiente procedimiento está basado en el primer estándar realizado por técnicos y contratistas especializados en
+                  fibra óptica y validado por la FOA, el estándar NECA/FOA 301. <br> <br>
+                  1.	Si la fibra óptica que va a verificarse no esta conectada, debe pelarse el cable de fibra, cortar una longitud de 2m de la
+                  misma. Limpiar y pelar la fibra que va a someterse a ensayo. <br> <br>
+                  2.	Coloque la OTDR a la fibra en la planta de cable a probar a través de un cable de lanzamiento de un tipo de fibra y tamaño
+                  que coincida con el cable bajo prueba. El cable de lanzamiento, también llamado "cable supresor de pulso", debe ser lo
+                  suficientemente largo para permitir que la OTDR supere la sobrecarga causada por el pulso de prueba. El cable de lanzamiento
+                  también proporcionará un conector de acoplamiento en el cable bajo prueba. Se debe utilizar un cable similar en el extremo 
+                  lejano del cable (a veces llamado cable de recepción o cable de cola) en prueba para proporcionar una referencia de conexión
+                  para probar la pérdida del conector final. <br> <br>
+                  3.	Encender el OTDR y mantenerlo un tiempo hasta que alcance la temperatura de trabajo. <br> <br>
+                  4.	Programar los parámetros adecuados para el OTDR para su operación, incluyendo la longitud de onda, índice de refracción de
+                  la fibra a verificar y modo de exploración y verificación. <br> <br>
+                  5.	Ajustar la resolución para poder visualizar toda la fibra óptica bajo prueba. Se recomienda mantener el ancho del impulso
+                  tan estrecho como sea posible, para obtener la mejor resolución. <br> <br>
+                  6.	Medir la atenuación en todas las discontinuidades, empalmes, conectores y toda la fibra en general. <br> <br>
+                  7.	Medir la atenuación de extremo a extremo de la fibra en dB y en dB/Km. <br> <br>
+                  8.	Repetir los pasos del 1 al 7 para todas las longitudes de onda requeridas. <br> <br>
+                  9.	Tomar un registro de la posición del OTDR durante cada medida, es imperativo que se almacene cada dato registrado, para
+                  futuras mediciones y/o resolución de fallas. <br> <br>
+                  10.	Finalmente, repetir todos los pasos anterior, con el OTDR conectado al otro extremo de la fibra del cable óptico, después
+                  se promedia ambos resultados, con el objetivo de obtener un valor más preciso. <br> <br>
+                  <center>Perdidas <sub>OTDR TOTAL</sub> = (Perdidas <sub>Direccion A</sub>+ Perdidas <sub>Direccion B</sub>)/2</center>
+              </p>
+             <p class="pasos-principales">
+              A continuación se muestran unos tutoriales para aprender el análisis de trazas del OTDR y los procedimientos que aseguran una óptima medición y evaluación en los niveles de la red. <br><br>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/gyCqkAdLegw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/GX-wJI9VLEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <br><br>
+             </p>
+             <h4 id="item-4">Fuente de Luz y Medidor de Potencia</h4> <br><br>
+             <p class="pasos-principales">
+               Con la finalidad de estudiar y medir la potencia en un cable de fibra óptica, se ofrece el siguiente tutorial con pasos sencillos, utilizando los siguientes implementos:
+               <ol style="list-style-type: circle;">
+              <li>Jumper de referencia.</li>
+              <li>Jumper bajo prueba.</li>
+              <li>Adaptador y acoplador para conector.</li>
+              <li>Limpiador de férula.</li>
+              <li>Kit de inspección visual.</li>
+              <li>Microscopio electrónico.</li>
+              <li>Fuente de luz.</li>
+              <li>Power Meter.</li>
+              </ol> 
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/nPBmZ4o5l80" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </p>
+          </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-sm-8">
+              <div class="card" style="border-left: darkgoldenrod; border-left-width: 5px; border-style: solid;" >
+                <div class="card-header" style="font-family: 'PT Sans', sans-serif; font-size: medium;"  >
+                   <i> <b>Consideraciones importantes</b> </i> 
+                </div>
+              <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p style="font-weight: 400; font-size: smaller;"> Para más información se recomienda consultar el documento correspondiente al estándar TIA-526-14 donde se puede encontrar información detallada paso a paso sobre los parámetros que se deben considerar en la certificación de redes de fibra óptica, además de sus respectivos procedimientos.
+                      <a class="btn btn-primary btn-sm" href="http://az776130.vo.msecnd.net/media/docs/default-source/contractors-and-bidders-library/standards-guidelines/it-standards/tia-526-14.pdf?sfvrsn=2" role="button">TIA 526-14</a></p>
+                  </blockquote>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+    <footer
+    class="text-center text-lg-start text-white float-start w-100"
+    style="background-color: #0c0e11"
+    >
+<section class="">
+<div class="container text-center text-md-start mt-5">
+  <div class="row mt-3">
+    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+      <a  href="index.html">
+        <img src="images/Optical3.png" width="250px" height="63px" class="d-inline-block align-top" alt="Logo">
+      </a>
+      <p>¡Guía cada paso en la construcción de tu red óptica!</p>
+    </div>
+    <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-6">
+      <h6 class="text-uppercase fw-bold">OBJETIVO</h6>
+      <hr
+          class="mb-4 mt-0 d-inline-block mx-auto"
+          style="width: 60px; background-color: rgba(18, 15, 190, 0.952); height: 3px"
+          />
+          <p>
+            Optimizar los procesos concernientes al diseño e instalación de las redes de fibra óptica, con nuestras guías para cada etapa,
+      y el programa de toma de decisiones. Impulsando su funcionamiento y disminuyendo posibles fallas.
+          </p>
+    </div>
+    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+      <h6 class="text-uppercase fw-bold">CONTACTO</h6>
+      <hr
+          class="mb-4 mt-0 d-inline-block mx-auto"
+          style="width: 60px; background-color:rgba(18, 15, 190, 0.952); height: 3px"
+          />
+      <p><i class="fas fa-home mr-3"></i> Proyecto realizado para optar al título de Ing. Telecomunicaciones.</p>
+      <p><i class="fas fa-envelope mr-3"></i><img src="./images/logoUjap.svg" alt="Logo Ujap" style="width: 32px; height: 32px;"> Universidad José Antonio Páez.</p>
+      <p><i class="fas fa-phone mr-3"></i><img src="./images/email.png" alt="email"> karibb8900@gmail.com</p>
+    </div>
+  </div>
+</div>
+</section>
+<div
+   class="text-center p-2"
+   style="background-color: rgba(4, 3, 100, 0.281)"
+   >
+  <p> &copy;2022 Optical | Karina Bierkamp</p> 
+</div>
+</footer>
+</body>  
+</html>

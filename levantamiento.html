@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Etapa de revisión y levantamiento de información de toda la zona 
+    donde se desea instalar el servicio. Incluyendo la elaboración de croquis, 
+    mapeo de la zona, recursos, tipos de instalación según estructuras del urbanismo 
+    y posible demanda en el sector.">
+    <meta name="keywords" content="Levantamiento, evaluación, croquis, mapeo">
+    <meta name= "author" content="Karina Bierkamp">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@284&family=PT+Sans&family=Roboto+Serif:ital,wght@1,500&display=swap');
+        </style>
+    <title>Etapa de Levantamiento</title>
+    <link rel="shorcut icon" href="favicon.png">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/Optical3.png"  height="65px" class="d-inline-block align-top" alt="Logo">
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav text-center">
+          <a class="nav-item nav-link active" href="#">Levantamiento </a>
+          <a class="nav-item nav-link" href="diseño.html">Diseño</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Instalación
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="conductos-subconductos.html">Conductos y Subconductos</a></li>
+              <li><a class="dropdown-item" href="conductos-subconductos.html#lubricante">Lubricante</a></li>
+              <li><a class="dropdown-item" href="traccion.html">Cinta y Caja de Tracción</a></li>
+              <li><a class="dropdown-item" href="empalme.html">Empalme</a></li>
+              <li><a class="dropdown-item" href="instalacion.html#exteriores">En Exteriores</a></li>
+              <li><a class="dropdown-item" href="instalacion.html#interiores">En Interiores</a></li>
+              <li><a class="dropdown-item" href="terminacion.html">Terminación de Fibra</a></li>
+            </ul>
+          </li>
+          <a class="nav-item nav-link" href="certificacion.html">Certificación</a>
+          <a class="nav-item nav-link" href="software.html">Optical Decisions</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <header class="header-levantamiento">
+                <h1 class="titulo-header"><strong>Etapa de Levantamiento</strong> </h1><br>
+                <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                    style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: #fff;"></path>
+                </svg></div>
+</header>
+<nav class="nav flex-column float-start sticky-top d-none d-xl-block d-lg-block w-40" style="background-color:  rgb(8, 7, 58)">
+  <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;"> --- </a>
+    <a class="nav-link" href="#"style="color:rgb(8, 7, 58) ;"> --- </a>
+  <a class="nav-link active text-light" aria-current="page" href="levantamiento.html" style="font-size:x-large"><b>Levantamiento</b> </a>
+  <a class="nav-link text-light" href="#item-1"style="font-size: large;">Detalles Geográficos</a>
+  <a class="nav-link text-light" href="#item-2"style="font-size: large;">Posible nodo GPON</a>
+  <a class="nav-link text-light" href="#item-3"style="font-size: large;">Total de usuarios y <br> estimación de clientes.</a>
+    <a class="nav-link text-light" href="#item-4"style="font-size: large;">Tipo de instalación</a>
+    <a class="nav-link text-light" href="#item-5"style="font-size: large;">Posible ruta en croquis</a>
+    <a class="nav-link text-light" href="#item-6"style="font-size: large;">Clientes para migración <br> de servicios</a>
+    <a class="nav-link text-light" href="#item-7"style="font-size: large;">Variación para troncales </a>
+    <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+    <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+    <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+    <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+    
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-10 justify-content-center" >
+            <main>
+                En esta etapa se procede a realizar un mapeo de la zona donde se aspira 
+                    a construir la red de fibra óptica, y aunque es un trabajo donde no hay que 
+                     hacer ninguna labor técnica de precisión, es necesario que se tengan en 
+                      consideración una serie de factores que ayudarían en gran medida a la eficacia 
+                       del posterior diseño de la red. Algunos de ellos son: </h3> <br><br>
+            </main>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-sm-8">
+          <h4 id="item-1">Detalles Geográficos</h4> <br><br>
+            <p class="pasos-principales">
+                1.	Especificar la localidad del urbanismo, detallando calles, avenidas y puntos de referencia.</p> <br> <br>
+                <h4 id="item-2">Posible nodo GPON</h4> <br><br>
+            <p class="pasos-principales">
+                2.	Localizar, según la ya conocida ruta de la red troncal, el posible punto de acceso desde
+                donde se vaya a realizar el tendido de la fibra, así como la verificación de la existencia de
+                nodos GPON, y NAP de segundo o tercer nivel con puertos disponibles cerca del urbanismo en consideración.</p> <br> <br>
+                <h4 id="item-3">Total de usuarios y estimación de clientes.</h4> <br><br>
+                <p class="pasos-principales">
+                3.	Cantidad total de hogares, y el porcentaje de posibles clientes. <br> <br></p>
+                <h4 id="item-4">Tipo de instalación</h4> <br><br>
+                <p class="pasos-principales">
+                4.	Identificar el tipo de vivienda, si son casas o apartamentos. De forma general, como es la división
+                 del urbanismo, si es por manzanas, calles, u otro tipo de sectorización, además del tipo de nomenclatura
+                  usado para la identificación de cada hogar. En el caso de edificios, se debe señalar datos específicos como: 
+                 <br> <br>
+                    - Número de alas. <br>
+                    - Cantidad de pisos. <br>
+                    - Desde cual piso empiezan los apartamentos. <br>
+                    - Cuantos apartamentos son por piso/ala/edificio. <br>  <br></p>
+                    <h4 id="item-5">Posible ruta en croquis</h4> <br><br>
+                    <p class="pasos-principales">
+                5.  Pre-establecer la posible ruta para la fibra óptica. Esto significa evaluar si será un tendido aéreo, 
+                    subterráneo o ambos, desde la parte exterior de la residencia, tomando en cuenta las alternativas 
+                    ya establecidas del segundo punto, hasta adentrarse hacia el interior de la misma. En este punto 
+                    es importante considerar: <br> <br>
+                    - Identificar si los postes o tanquillas pertenecen a alguna empresa de telecomunicaciones, puesto <br>
+                     que el procedimiento para la concesión de permisos varía en estos casos, si pertenecen al urbanismo
+                      o si son de dominio público. <br>
+                    - En el caso de tendido aéreo: Tipo de poste, si es de electricidad o telecomunicaciones. <br>
+                    - Para tendidos subterráneos: Identificar el tipo, si son tipo A, B o C, verificar que se
+                     cuente con el espacio y las condiciones necesarias para que el cable de fibra pueda ser
+                      colocado sin sufrir algún daño que interfiera en la calidad del servicio, además, asegurarse
+                       de que exista la conexión entre tanquillas. <br>
+                    - Tomar las coordenadas UTM de cada poste y tanquilla que se pretende utilizar, además de sus
+                     respectivas fotos, a fin de tener un registro completo para posibles permisologías adicionales. <br>
+                    - Calcular el metraje entre cada poste o tanquilla. <br> <br>
+                    6.	Evaluar el tipo de arquitectura de las residencias: <br> <br>
+                    - Si cuentan con FXB. <br>
+                    - Cajas de paso. <br>
+                    - Conductos para cableado de telecomunicaciones. <br>
+                    - Si son necesarias acometidas (zanjados) especiales, indicar si son en áreas verdes o cemento. <br> <br>
+            En el caso de varias alternativas de acometida hacia el hogar, consultar a los usuarios qué
+             tipo de instalación hacia el hogar preferirían. <br> <br>
+            7. Realizar un croquis de toda la zona donde se desea el servicio, especificando todos los detalles descritos anteriormente. <br><br></p>
+            <h4 id="item-6">Clientes para migración de servicios </h4> <br><br>
+                    <p class="pasos-principales">
+             8.	En el caso de que ya exista otro servicio en el urbanismo, por ejemplo, HFC, encuestar cuántos de esos
+              clientes desearían una migración hacia tecnología FTTH. <br> <br> </p>
+              <h4 id="item-7">Variación para troncales </h4> <br><br>
+                    <p class="pasos-principales">
+              9.  Cuando el levantamiento de la zona es con fines de realizar tendidos troncales, por ser a nivel macro,
+               engloba varias residencias, y urbanismos dentro de la misma zona, por lo que se aplicarían los mismos
+                lineamientos, con la excepción de que los datos importantes a obtener de las residencias, son la cantidad de
+                 hogares que existen en cada una, puesto que el interés estará centrado en hacer la construcción de la red
+                  por fuera de las mismas, para luego de tener la fibra troncal o subtroncal en la zona, proceder a entrar
+                   a cada una de ellas. <br> <br>  </p>
+                
+        </div>
+    </div>
+</div>            
+<footer
+              class="text-center text-lg-start text-white float-start w-100"
+              style="background-color: #0c0e11"
+              >
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <a  href="index.html">
+                  <img src="images/Optical3.png" width="250px" height="63px" class="d-inline-block align-top" alt="Logo">
+                </a>
+                <p>¡Guía cada paso en la construcción de tu red óptica!</p>
+              </div>
+              <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-6">
+                <h6 class="text-uppercase fw-bold">OBJETIVO</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color: rgba(18, 15, 190, 0.952); height: 3px"
+                    />
+                    <p>
+                      Optimizar los procesos concernientes al diseño e instalación de las redes de fibra óptica, con nuestras guías para cada etapa,
+                y el programa de toma de decisiones. Impulsando su funcionamiento y disminuyendo posibles fallas.
+                    </p>
+              </div>
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase fw-bold">CONTACTO</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color:rgba(18, 15, 190, 0.952); height: 3px"
+                    />
+                <p><i class="fas fa-home mr-3"></i> Proyecto realizado para optar al título de Ing. Telecomunicaciones.</p>
+                <p><i class="fas fa-envelope mr-3"></i><img src="./images/logoUjap.svg" alt="Logo Ujap" style="width: 32px; height: 32px;"> Universidad José Antonio Páez.</p>
+                <p><i class="fas fa-phone mr-3"></i><img src="./images/email.png" alt="email"> karibb8900@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+             class="text-center p-2"
+             style="background-color: rgba(4, 3, 100, 0.281)"
+             >
+            <p> &copy;2022 Optical | Karina Bierkamp</p> 
+        </div>
+      </footer>
+</body>
+</html>

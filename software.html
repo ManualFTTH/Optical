@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Software basico para toma de decisiones en el diseño e instalacion de redes FTTh">
+    <meta name="keywords" content="Software, toma de decisiones, diseño, instalacion, FTTH">
+    <meta name="author" content="Karina Bierkamp">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <script src="js/software.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+      </script>
+    
+    <title>Optical Decisions</title>
+    <link rel="shorcut icon" href="favicon.png">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/Optical3.png" height="65px" class="d-inline-block align-top" alt="Logo">
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav text-center">
+          <a class="nav-item nav-link" href="levantamiento.html">Levantamiento </a>
+          <a class="nav-item nav-link" href="diseño.html">Diseño</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Instalación
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="conductos-subconductos.html">Conductos y Subconductos</a></li>
+              <li><a class="dropdown-item" href="conductos-subconductos.html#lubricante">Lubricante</a></li>
+              <li><a class="dropdown-item" href="traccion.html">Cinta y Caja de Tracción</a></li>
+              <li><a class="dropdown-item" href="empalme.html">Empalme</a></li>
+              <li><a class="dropdown-item" href="instalacion.html#exteriores">En Exteriores</a></li>
+              <li><a class="dropdown-item" href="instalacion.html#interiores">En Interiores</a></li>
+              <li><a class="dropdown-item" href="terminacion.html">Terminación de Fibra</a></li>
+            </ul>
+          </li>
+          <a class="nav-item nav-link" href="certificacion.html">Certificación</a>
+          <a class="nav-item nav-link active" href="#">Optical Decisions</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <header class="header-diseno">
+          <h1 class="titulo-header"><strong>Optical Decisions</strong> </h1><br>
+          <div class="row">
+            <div class="col-sm-6 justify-content">
+              <p style="font-size: 20px; font-family: 'PT Sans', sans-serif;color:white; font-weight: 400; margin: 20px 0 0 30px"> Toma las decisiones de diseño e instalación para tus redes FTTH, basándote en las opciones que mejor se adapten a las caracteristicas del proyecto y de tu empresa, con lineamientos de los más altos estándares en redes de fibra óptica</p>
+            </div>
+          </div>
+            
+                <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                    style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: #fff;"></path>
+                </svg></div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 justify-content">
+          <p class="pasos-principales"> A continuación deberá introducir todos los datos requeridos y elegir entre las opciones que se le presenten, de forma precisa, con la finalidad de que el programa pueda ayudarle en el cálculo y toma de decisiones en el diseño e instalación de la red, adaptando las caracteristicas propias de la red, el entorno y la empresa, a los estándares que garantizan la calidad de los enlaces de fibra óptica.</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-7">
+          <div class="card" style="border-left: darkgoldenrod; border-left-width: 5px; border-style: solid;">
+            <div class="card-header" style="font-family: 'PT Sans', sans-serif; font-size: large;" >
+               <i> <b>Consideraciones importantes</b> </i> 
+            </div>
+          <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p style="font-weight: 400; font-size: smaller;">Los valores numéricos que sean decimales, deben introducirse con un punto ".", y no una coma, por cuestiones de reconocimiento del programa. </p>
+              </blockquote>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div> 
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-10">
+          <div class="input-group sm-6">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Introduzca el nombre del proyecto</span>
+            </div>
+            <input type="text" class="form-control" id="inputNomProyecto" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-5">
+          <div class="input-group sm-6">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Cantidad total de hogares</span>
+            </div>
+            <input type="text" class="form-control" id="inputHP1" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+          </div> 
+        </div>
+        <div class="col-sm-5">
+          <div class="input-group sm-6">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Cantidad de posibles clientes</span>
+            </div>
+            <input type="text" class="form-control" id="inputPosibC" aria-label="Default" aria-describedby="inputGroup-sizing-default" onkeyup="porcentajeClientes()">
+
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-5">
+          <div class="input-group sm-6">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Porcentaje de cobertura de la empresa</span>
+            </div>
+            <input type="text" class="form-control" id="inputPorcCob" aria-label="Default" aria-describedby="inputGroup-sizing-default" onkeyup="cantClientes()">
+          </div> 
+        </div>
+        <div class="col-sm-5">
+          <select class="form-select" id="selectResPtos" aria-label="Default select example">
+            <option selected >Determine la reserva de puertos</option>
+            <option value="1">20 %</option>
+            <option value="2">25 %</option>
+            <option value="3">30 %</option>
+          </select>
+        </div>
+        <script src="js/software.js"> </script>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-7">
+        <div class="card" style="border-left: darkgoldenrod; border-left-width: 5px; border-style: solid;">
+          <div class="card-header" style="font-family: 'PT Sans', sans-serif; font-size: medium;" >
+             <i> <b>Consideraciones importantes</b> </i> 
+          </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p style="font-weight: 400; font-size: smaller;">Recuerde que el porcentaje de reserva debe ser elegido con base a la proyeccion del crecimiento que se espera tener en la residencia. La FOA recomienda entre el 20% y 25% del porcentaje elegido inicialmente. </p>
+            </blockquote>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12">
+        <p id="resultadoPorcC" style="font-weight: 400; font-size: larger;"> En base a sus elecciones, se recomienda diseñar con un porcentaje de cobertura de:  </p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-4">
+        <select class="form-select" id="selectResTron" aria-label="Default select example">
+          <option selected >Determine el tipo de red</option>
+          <option value="1">Residencial</option>
+          <option value="2">Troncal</option>
+        </select>
+      </div>
+      <div class="col-sm-4">
+        <select class="form-select" id="selectEdifCasa" aria-label="Default select example">
+          <option selected >Tipo de residencia</option>
+          <option value="1">Edificio</option>
+          <option value="2">Casa</option>
+        </select>
+      </div>
+      <div class="col-sm-4">
+        <select class="form-select" id="selectTipoInst" aria-label="Default select example">
+          <option selected >Tipo de instalación</option>
+          <option value="1">Posteadura</option>
+          <option value="2">Tanquilla</option>
+          <option value="3">Mixta</option>
+        </select>
+      </div>
+      
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-5">
+        <select class="form-select" id="selectTipoSubt" aria-label="Default select example">
+          <option selected >Tipo de instalación subterránea</option>
+          <option value="1">Por ductos</option>
+          <option value="2">Directamente enterrado</option>
+          <option value="3">Mixta</option>
+        </select>
+      </div>
+      <div class="col-sm-5">
+        <select class="form-select" id="selectCurvatura" aria-label="Default select example">
+          <option selected >Cantidad de curvaturas</option>
+          <option value="1">Muchas</option>
+          <option value="2">Pocas</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <script src="js/software.js"> </script>
+  <div class="container">
+    <div class="row justify-content-center">
+      <p id="resultadoPorcC" style="font-weight: 400; font-size: larger;">A continuación elija los ratios de division de los splitters de primer y segundo nivel en los que estará basada la arquitectura de la red.</p>
+      <div class="col-sm-5">
+        <select class="form-select" id="selectSplitN1" aria-label="Default select example">
+          <option selected >Splitter de primer nivel</option>
+          <option value="1">1:2</option>
+          <option value="2">1:4</option>
+          <option value="3">1:8</option>
+        </select>
+      </div>
+      <div class="col-sm-5">
+        <select class="form-select" id="selectSplitN2" aria-label="Default select example">
+          <option selected >Splitter de segundo nivel</option>
+          <option value="1">1:4</option>
+          <option value="2">1:8</option>
+          <option value="3">1:16</option>
+        </select>
+      </div>
+      <script src="js/software.js"> </script>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12">
+        <div class="card" style="border-left: darkgoldenrod; border-left-width: 5px; border-style: solid;">
+          <div class="card-header" style="font-family: 'PT Sans', sans-serif; font-size: medium;" >
+             <i> <b>Consideraciones importantes</b> </i> 
+          </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p style="font-weight: 400; font-size: smaller;"> Basados en el estándar ITU-T G984.x En principio, cuanto más grande sea la relación de división de la GPON, más atrayente resultará para los operadores. Sin embargo, una relación de división más grande implica un divisor óptico más grande, lo cual significa un aumento de la potencia total para soportar el alcance físico. Con la tecnología actual, una relación de división hasta de 1:64 para la capa física es realista. No obstante, dada la continua evolución de los módulos ópticos, se debería prever utilizar relaciones de división hasta de 1:128.</p>
+              
+            </blockquote>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-10">
+        <p style="font-weight: 400; font-size: smaller;"></p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-12">
+        <p id="resultadoComprobarEstandar" style="font-weight: 400; font-size: larger;"> Por favor pulse el siguiente botón para comprobar el estándar.  </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <a class="btn btn-primary btn-sm" onclick="cantPuertos(); tipoFibraCable()" role="button">Cálculo de splitters</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12">
+        <p id="resultadoCantSplitter" style="font-weight: 400; font-size: larger;"> </p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12">
+        <p id="resultadoTipoFibra" style="font-weight: 400; font-size: larger;"> </p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12">
+        <div class="card" style="border-left: darkgoldenrod; border-left-width: 5px; border-style: solid;" >
+          <div class="card-header" style="font-family: 'PT Sans', sans-serif; font-size: medium;"  >
+             <i> <b>Consideraciones importantes</b> </i> 
+          </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p style="font-weight: 400; font-size: smaller;"> La cantidad de hilos de la fibra vendrá dada por el número de NAPs y usuarios finales, más una cantidad de reserva, que según recomendaciones de la FOA, exige un mínimo del 20% del total, para responder a posibles daños, y futuras expansiones. Además de la reserva de hilos, se debe considerar una reserva de entre 10% y 20% del total de longitud del cable, por cada enlace, no solo para la ampliación de la red, sino porque también cada punto de empalme y conectores adicionales consumen metros de fibra.</p>
+            </blockquote>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 justify-content">
+        <p class="pasos-principales"> <b> Cálculo teórico del presupuesto de potencia óptica.</b></p>
+        <p style="font-weight: 400; font-size: larger;"> A continuación, apoyado en los parámetros de su equipo OLT y ONT, por favor suministre las potencias de transmisión máximas y la sensibilidad mínima de recepcion en dBm, para los enlaces descendente y ascendente. Además, el margen de resguardo de potencia con el que desea trabajar, que según la recomendación ITU-T G.984.x debería ser +3dBm.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-5">
+        <div class="input-group sm-7">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Potencia máx. de transmisión OLT</span>
+          </div>
+          <input type="text" class="form-control" id="inputPotMaxTxDes" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="input-group sm-7">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Potencia máx. de transmisión ONT</span>
+          </div>
+          <input type="text" class="form-control" id="inputPotMaxTxAs" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-5">
+        <div class="input-group sm-7">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Sensibilidad min. de recepción ONT</span>
+          </div>
+          <input type="text" class="form-control" id="inputPotMinRxDes" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="input-group sm-7">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Sensibilidad min. de recepción OLT</span>
+          </div>
+          <input type="text" class="form-control" id="inputPotMinRxAs" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-5">
+          <div class="input-group sm-7">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Margen de resguardo</span>
+            </div>
+            <input type="text" class="form-control" id="inputMargen" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 justify-content">
+          <p class="pasos-principales"> <b> Cálculo teórico del presupuesto de atenuación óptica.</b></p>
+          <p style="font-weight: 400; font-size: larger;">Con la finalidad de hacer un cálculo que contemple los valores extremos que se puedan tener en el proyecto, coloque los datos correspondientes al enlace óptico más extenso de la red diseñada. Para distancias más precisas apóyese de herramientas de geolocalización.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-5">
+          <div class="input-group sm-7">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Distancia del enlace (Km)</span>
+            </div>
+            <input type="text" class="form-control" id="inputDist" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="input-group sm-7">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Cantidad de conectores</span>
+            </div>
+            <input type="text" class="form-control" id="inputConectores" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-3">
+          <select class="form-select" id="selectEmpalme" aria-label="Default select example">
+            <option selected >Tipo de Empalme</option>
+            <option value="1">Por fusión</option>
+            <option value="2">Mecánico</option>
+            <option value="3">Ambos</option>
+          </select>
+        </div>
+        <div class="col-sm-4">
+          <div class="input-group col-sm-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Empalmes por Fusion</span>
+            </div>
+            <input type="text" class="form-control" id="inputEmpFusion" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="input-group col-sm-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Empalmes Mecánicos</span>
+            </div>
+            <input type="text" class="form-control" id="inputEmpMecanico" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+          </div>
+        </div>
+      </div>
+      <script src="js/software.js"> </script>
+    </div>
+    <div class="container">
+      <div class="row ">
+        <p style="font-weight: 400; font-size: larger;">Pulse el siguiente botón para el cálculo automático del presupuesto de potencia óptica.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a class="btn btn-primary btn-sm" onclick="presupuestoOptico()" role="button">Presupuesto óptico</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 justify-content">
+          <p style="font-weight: 400; font-size: larger;" id="resultadoPPO"></p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 justify-content"  id="planDeAccion">
+          <p class="pasos-principales" id="plan" style="font-weight: bold; font-size: x-large; color:midnightblue; text-align: center; font-family: 'PT Sans', sans-serif;"> </p> <br>
+          <p style="font-weight: 400; font-size: larger;" id="nombreProyecto"></p>
+          <p style="font-weight: 400; font-size: larger;" id="planCobertura"></p>
+          <p style="font-weight: 400; font-size: larger;" id="planFibra"></p>
+          <p style="font-weight: 400; font-size: larger;" id="planSplitter1"></p>
+          <p style="font-weight: 400; font-size: larger;" id="planSplitter2"> </p>
+          <p style="font-weight: bold; font-size: larger; font-family: 'PT Sans', sans-serif; " id="planDescendente">  </p>
+          <p style="font-weight: 400; font-size: larger;" id="planPPotenciaD"> </p>
+          <p style="font-weight: 400; font-size: larger;" id="planPPerdidaD"> </p>
+          <p style="font-weight: bold; font-size: larger; font-family: 'PT Sans', sans-serif; "id="planAscendente" ></p>
+          <p style="font-weight: 400; font-size: larger;" id="planPPotenciaA"></p>
+          <p style="font-weight: 400; font-size: larger;" id="planPPerdidaA">  </p>
+          <p style="font-weight: 400; font-size: larger;" id="planDiagFicha">  </p>
+          <a href="UNIFILAR.pdf" ><p style="font-weight: 400; font-size: larger;" id="planDiag"></p></a>
+          <a  href="./images/Cable ADSS.PNG" ><p style="font-weight: 400; font-size: larger;" id="planFicha"></p></a>
+          <div class="col-sm-12">
+            <div class="card" style="border-left: darkgoldenrod; border-left-width: 5px; border-style: solid;" >
+              <div class="card-header" style="font-family: 'PT Sans', sans-serif; font-size: medium;"  >
+                <p style="font-weight:bold;font-style: italic; font-size: larger; font-family: 'PT Sans', sans-serif; " id="planInstalTitulo">  </p>
+              </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                  <p style="font-weight: 400; font-size: smaller;" id="planInstalacion"> </p>
+                </blockquote>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <footer
+              class="text-center text-lg-start text-white"
+              style="background-color: #0c0e11"
+              >
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <a  href="index.html">
+                  <img src="images/Optical3.png" width="250px" height="63px" class="d-inline-block align-top" alt="Logo">
+                </a>
+                <p>¡Guía cada paso en la construcción de tu red óptica!</p>
+              </div>
+              <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-6">
+                <h6 class="text-uppercase fw-bold">OBJETIVO</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color: rgba(18, 15, 190, 0.952); height: 3px"
+                    />
+                    <p>
+                      Optimizar los procesos concernientes al diseño e instalación de las redes de fibra óptica, con nuestras guías para cada etapa,
+                y el programa de toma de decisiones. Impulsando su funcionamiento y disminuyendo posibles fallas.
+                    </p>
+              </div>
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase fw-bold">CONTACTO</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color:rgba(18, 15, 190, 0.952); height: 3px"
+                    />
+                <p><i class="fas fa-home mr-3"></i> Proyecto realizado para optar al título de Ing. Telecomunicaciones.</p>
+                <p><i class="fas fa-envelope mr-3"></i><img src="./images/logoUjap.svg" alt="Logo Ujap" style="width: 32px; height: 32px;"> Universidad José Antonio Páez.</p>
+                <p><i class="fas fa-phone mr-3"></i><img src="./images/email.png" alt="email"> karibb8900@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+             class="text-center p-3"
+             style="background-color: rgba(4, 3, 100, 0.281)"
+             >
+            <p> &copy;2022 Optical | Karina Bierkamp</p> 
+        </div>
+      </footer>
+</body>
+</html>
+

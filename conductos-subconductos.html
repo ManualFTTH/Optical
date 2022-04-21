@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Parametros a considerar para la eleccion de los conductos
+    y subconductos de fibra optica, considerando tipos, radio de curvatura, dimensionamiento 
+    y lubricante del conducto">
+    <meta name="keywords" content="Conductos, subconductos, lubricante, dimensionamiento, cantidad">
+    <meta name= "author" content="Karina Bierkamp">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+      </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@284&family=PT+Sans&family=Roboto+Serif:ital,wght@1,500&display=swap');
+        </style>
+    <title>Conductos y Subconductos</title>
+    <link rel="shorcut icon" href="favicon.png">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Optical3.png"  height="65px" class="d-inline-block align-top" alt="Logo">
+              </a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav text-center">
+              <a class="nav-item nav-link" href="levantamiento.html">Levantamiento </a>
+              <a class="nav-item nav-link" href="diseño.html">Diseño</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Instalación
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Conductos y Subconductos</a></li>
+                  <li><a class="dropdown-item" href="conductos-subconductos.html#lubricante">Lubricante</a></li>
+                  <li><a class="dropdown-item" href="traccion.html">Cinta y Caja de Tracción</a></li>
+                  <li><a class="dropdown-item" href="empalme.html">Empalme</a></li>
+                  <li><a class="dropdown-item" href="instalacion.html#exteriores">En Exteriores</a></li>
+                  <li><a class="dropdown-item" href="instalacion.html#interiores">En Interiores</a></li>
+                  <li><a class="dropdown-item" href="terminacion.html">Terminación de Fibra</a></li>
+                </ul>
+              </li>
+              <a class="nav-item nav-link" href="certificacion.html">Certificación</a>
+              <a class="nav-item nav-link" href="software.html">Optical Decisions</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <header class="header-instalacion">
+                <h1 class="titulo-header"><strong>Etapa de Instalación</strong> </h1><br>
+                <p class="subtitulo">Conductos y Subconductos <br> Lubricante
+                </p>
+                <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                    style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: #fff;"></path>
+                </svg></div>
+</header>
+<nav class="nav flex-column float-start sticky-top d-none d-xl-block d-lg-block w-40" style="background-color:  rgb(8, 7, 58)">
+    <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;"> --- </a>
+      <a class="nav-link" href="#"style="color:rgb(8, 7, 58) ;"> --- </a>
+    <a class="nav-link active text-light" aria-current="page" href="conductos-subconductos.html" style="font-size:x-large"><b> Conductos y <br> Subconductos</b> </a>
+    <a class="nav-link text-light" href="#item-1"style="font-size: large;">Parámetros Generales</a>
+    <a class="nav-link text-light" href="#item-2"style="font-size: large;">Dimensionamiento de <br> Conductos y <br> Subconductos.</a>
+    <a class="nav-link text-light" href="#item-3"style="font-size: large;">Lubricante del Conducto</a>
+      <a class="nav-link text-light" href="#item-4"style="font-size: large;"> Cantidad de Lubricante</a>
+      <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+      <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+      <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+      <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+      <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+      <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+      <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+      
+  </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-10">
+                    <p class="text-justify">
+                        <main>
+                            En las instalaciones subterraneas, el cable se puede tender tanto dentro como fuera de canalizaciones nuevas o ya existentes, sin embargo, una excelente practica es colocar el cable dentro de conductos o tuberías para proprocionarle un medio de instalación que lo dote de una mayor protección, ademas de la posibilidad de sobredimensionar el conducto o instalar algunos adicionales para la colocación de cables adicionales en la misma ruta.
+                        </main>
+                    </p> 
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <img class="img-fluid" src="./images/Conducto y subconducto de fibra optica.PNG" alt="Conducto y Subconducto de fibra optica" title="Conducto y Subconducto de fibra optica">
+        </div>
+         <div class="container-fluid">
+             <div class="row justify-content-center">
+                 <div class="col-sm-8">
+                     <h4 id="item-1">Parámetros generales a cumplir en los conductos y subconductos de fibra óptica</h4> <br><br>
+                    <p class="pasos-principales">
+                        <ul style="list-style-type: none">
+                            <li>
+                               <b> - Color de conductos:</b> Negro o gris.
+                            </li>
+                            <li>
+                               <b>- Color de subconductos:</b> Naranja o amarillo para identificarlos como conductos
+                                de fibra óptica.
+                            </li>
+                            <li>
+                                <b>-	Salientes longitudinales lisas de los conductos: </b>Son comúnmente usadas en localizaciones ajustadas
+                            </li>
+                            <li>
+                                <b>-	Salientes longitudinales corrugadas de los conductos:</b> Se pueden utilizar en emplazamientos con muchas
+                                vueltas o curvas. Una práctica recomendada es que después de que un subconducto corrugado se haya introducido en
+                                 un conducto, se deberá dejar durante un día sin cortar, para permitir que el mismo se retraiga dentro del conducto. 
+                            </li>
+                            <li>
+                                <b>-	Radio de curvatura con soporte:</b> Se debería usar solo cuando el conducto se curva alrededor de una
+                                 estructura de soporte, como en el caso de otro conducto o sobre un carrete. 
+                            </li>
+                            <li>
+                                <b>-	Radio de curvatura sin soporte:</b> Se utiliza para curvaturas de conductos en los cuales no hay soporte
+                                 en la curva.
+                            </li>
+                        </ul>
+                    </p>
+                 </div>
+             </div>
+             <div class="row justify-content-center">
+                 <div class="col-sm-8">
+                     <h4 id="item-2">Dimensionamiento de Conductos y Subconductos.</h4> <br><br>
+                     <p class="pasos-principales">
+                         <br>
+                        En cuanto al dimensionamiento, una razón de llenado del 50 por 100 (por área de sección transversal) es una buena regla 
+                        apróximada para conseguir el mínimo tamaño del conducto. Los tamaños estándar de los conductos varían de 3 a 8 pulgadas, y
+                        los de los subconductos varían desde 0,75 a 2 pulgadas.  <br>
+                     </p>
+                 </div>
+             </div>
+             <center><img class="img-fluid" src="./images/Relacion Conducto Subconducto.PNG" alt="Relación Conducto Subconducto" title="Relación Conducto Subconducto"></center> 
+             <div class="row justify-content-center">
+                 <div class="col-sm-8">
+                     <p class="pasos-principales">
+                        Sin embargo, se recomienda el uso de la siguiente fórmula para garantizar el cumplimiento de los requerimientos
+                        de instalaciones presentes y contemplar algún porcentaje de expansiones futuras. <br> <br>
+                        <p class="text-center">$D^2$ > $2d^2$</p>
+                     </p> <br><br><br>
+                 </div>
+             </div>
+             <div class="row justify-content-center">
+                 <div class="col-sm-8">
+                        <a name="lubricante"></a>
+                       <h4 id="item-3"> Lubricante del Conducto </h4><br> <br>
+                       <p class="pasos-principales">
+                            Son recomendaciones del estándar NECA/FOA 301 hacer uso de lubricantes en tramos largos de conducto, siempre y cuando
+                            sean compatibles con la cubierta del cable. Su propósito es reducir el coeficiente de fricción del cable. Las características
+                            que debe tener un fue lubricante de fibra óptica, de acuerdo con Chomycz, son: <br>
+                            <ul style="list-style-type: none">
+                                <li>
+                                    - Adecuación a las temperaturas exteriores.
+                                </li>
+                                <li>
+                                    -	Propiedades ignifugas.
+                                </li>
+                                <li>
+                                    -	Un bajo coeficiente de fricción, preferiblemente menor que 0,25 cuando se usa sobre cables con cubierta
+                                     de polietileno u otros tipos de cables.
+                                </li>
+                                <li>
+                                    -	Coeficiente de fricción seco.
+                                </li>
+                                <li>
+                                    -	Examinado y probado por las autoridades pertinentes, como la UL o CSA.
+                                </li>
+                            </ul> 
+                        </p>
+                    </div>
+                </div>
+                
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8">
+                            <p class="pasos-principales">
+                                Lo recomendado es que el lubricante debe llenar el conducto por completo y debe ser aplicado: 
+                                <ul style="list-style-type: none;">
+                                    <li>
+                                        -	A todos los puntos de alimentación del cable, y a los puntos intermedios de tracción.
+                                    </li>
+                                    <li>
+                                        -	Justo antes de las curvas, cuando sea posible.
+                                    </li>
+                                    <li>
+                                        -	Con un manguito y una bomba para el lubricante.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                            <div class="row justify-content-center">
+                                <div class="col-sm-8">
+                                    <h4 id="item-4"> Cantidad de Lubricante</h4> <br><br>
+                                    <p class="pasos-principales">
+                                        <br>
+                                        La cantidad debe ser cuidada, por lo que cualquier derrame del mismo debe ser limpiada inmediatamente utilizando el
+                                        procedimiento indicado por el fabricante. Es por ello que se sugiere aplicar la siguiente fórmula para la estimación
+                                        aproximada de la cantidad adecuada de lubricante por instalación. <br><br>
+                                
+                                        <ul style="list-style-type: none;">
+                                            <li>
+                                                C: Cantidad de lubricante en litros.
+                                            </li>
+                                            <li>
+                                                L: Longitud del tendido en metros.
+                                            </li>
+                                            <li>
+                                                DIN: Diámetro interior nominal del conducto en centímetros.
+                                            </li>
+                                            <li>
+                                                DEN: Diámetro exterior nominal del cable en centímetros. 
+                                            </li>
+                                        </ul>
+                                       
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="text-center">$C$ = $0,00378 \cdot L\cdot (\dfrac{DIN}{DEN})$</p>                        
+         </div>
+         <footer
+         class="text-center text-lg-start text-white float-start w-100"
+         style="background-color: #0c0e11"
+         >
+   <section class="">
+     <div class="container text-center text-md-start mt-5">
+       <div class="row mt-3">
+         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+           <a  href="index.html">
+             <img src="images/Optical3.png" width="250px" height="63px" class="d-inline-block align-top" alt="Logo">
+           </a>
+           <p>¡Guía cada paso en la construcción de tu red óptica!</p>
+         </div>
+         <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-6">
+           <h6 class="text-uppercase fw-bold">OBJETIVO</h6>
+           <hr
+               class="mb-4 mt-0 d-inline-block mx-auto"
+               style="width: 60px; background-color: rgba(18, 15, 190, 0.952); height: 3px"
+               />
+               <p>
+                 Optimizar los procesos concernientes al diseño e instalación de las redes de fibra óptica, con nuestras guías para cada etapa,
+           y el programa de toma de decisiones. Impulsando su funcionamiento y disminuyendo posibles fallas.
+               </p>
+         </div>
+         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+           <h6 class="text-uppercase fw-bold">CONTACTO</h6>
+           <hr
+               class="mb-4 mt-0 d-inline-block mx-auto"
+               style="width: 60px; background-color:rgba(18, 15, 190, 0.952); height: 3px"
+               />
+           <p><i class="fas fa-home mr-3"></i> Proyecto realizado para optar al título de Ing. Telecomunicaciones.</p>
+           <p><i class="fas fa-envelope mr-3"></i><img src="./images/logoUjap.svg" alt="Logo Ujap" style="width: 32px; height: 32px;"> Universidad José Antonio Páez.</p>
+           <p><i class="fas fa-phone mr-3"></i><img src="./images/email.png" alt="email"> karibb8900@gmail.com</p>
+         </div>
+       </div>
+     </div>
+   </section>
+   <div
+        class="text-center p-3"
+        style="background-color: rgba(4, 3, 100, 0.281)"
+        >
+       <p> &copy;2022 Optical | Karina Bierkamp</p> 
+   </div>
+ </footer>
+</body>
+</html>

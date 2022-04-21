@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descripción de procedimientos, y consejos para realizar buenas
+     prácticas de construcción e instalación de redes FTTH, avaladas por estándares internacionales FOA,
+     TIA/ITU y NECA/FOA 301, considerando instalaciones subterráneas, aéreas y cableado vertical.">
+    <meta name="keywords" content="Instalacion, construccion, redes FTTH, cableado subterráneo, cableado aéreo, estándares, FOA">
+    <meta name= "author" content="Karina Bierkamp">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@284&family=PT+Sans&family=Roboto+Serif:ital,wght@1,500&display=swap');
+      </style>
+    <title>Etapa de Construcción e Instalación</title>
+    <link rel="shorcut icon" href="favicon.png">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/Optical3.png"  height="65px" class="d-inline-block align-top" alt="Logo">
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav text-center">
+          <a class="nav-item nav-link" href="levantamiento.html">Levantamiento </a>
+          <a class="nav-item nav-link" href="diseño.html">Diseño</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Instalación
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="conductos-subconductos.html">Conductos y Subconductos</a></li>
+              <li><a class="dropdown-item" href="conductos-subconductos.html#lubricante">Lubricante</a></li>
+              <li><a class="dropdown-item" href="traccion.html">Cinta y Caja de Tracción</a></li>
+              <li><a class="dropdown-item" href="empalme.html">Empalme</a></li>
+              <li><a class="dropdown-item" href="#">En Exteriores</a></li>
+              <li><a class="dropdown-item" href="instalacion.html#interiores">En Interiores</a></li>
+              <li><a class="dropdown-item" href="terminacion.html">Terminación de Fibra</a></li>
+            </ul>
+          </li>
+          <a class="nav-item nav-link" href="certificacion.html">Certificación</a>
+          <a class="nav-item nav-link" href="software.html">Optical Decisions</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <header class="header-instalacion">
+            <h1 class="titulo-header"><strong>Etapa de Instalación</strong> </h1><br>
+            <p class="subtitulo">Exteriores e Interiores
+            </p>
+            <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+</header>
+<nav class="nav flex-column float-start sticky-top d-none d-xl-block d-lg-block w-40" style="background-color:  rgb(8, 7, 58)">
+  <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;"> --- </a>
+    <a class="nav-link" href="#"style="color:rgb(8, 7, 58) ;"> --- </a>
+  <a class="nav-link active text-light" aria-current="page" href="instalacion.html" style="font-size:x-large"><b> Instalación </a>
+  <a class="nav-link text-light" href="#item-1"style="font-size: large;">En exteriores</a>
+  <a class="nav-link text-light" href="#item-2"style="font-size: large;">Directamente enterrado</a>
+  <a class="nav-link text-light" href="#item-3"style="font-size: large;">Por conductos</a>
+  <a class="nav-link text-light" href="#item-4"style="font-size: large;">Vía Aérea</a>
+  <a class="nav-link text-light" href="#item-5"style="font-size: large;">En interiores</a>
+  <a class="nav-link text-light" href="#item-6"style="font-size: large;">Cableado Vertical</a>
+  <a class="nav-link text-light" href="#item-7"style="font-size: large;">Tutorial de buenas <br> prácticas</a>
+    <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+    <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+    <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+    <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+    <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+</nav>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-sm-10">
+      <a name="exteriores"></a>
+      <main>
+        En la construcción de redes de fibra óptica, es imprescindible el manejo preciso de cada procedimiento que se lleve a cabo, con fines de plasmar en la realidad 
+       el diseño de ingeniería, y de evitar cualquier tipo de falla. Y aunque cada red es única, acá se reúnen
+       algunos pasos por paso y sugerencias, basados en estándares internacionales establecidos
+        por instituciones reconocidas en materia de fibra óptica, a modo de servir de guía 
+       para las buenas prácticas por parte de los contratistas y técnicos encargados de las obras. 
+    </main> <br><br>
+    </div>
+    <div class="col-sm-8">
+      <p class="pasos-principales">
+        1. En un principio es necesario conocer cada detalle del diseño de la red, para ello, se debe analizar 
+        cuidadosamente el plano, el diagrama unifilar y la ficha técnica de construcción, en conjunto con el
+         equipo de diseño, quienes deberían explicarlo a los contratistas a informar de cualquier punto estratégico, o
+          de relevancia dentro del proyecto. <br> <br>
+       2. El primer aspecto que se debe considerar es el entorno de construcción, si es tendido aéreo, o en vías 
+        generales de telecomunicaciones por conducto o directamente enterrado. Y en vista de eso, se secciona cada 
+         uno con sus respectivas sugerencias de procedimientos, de acuerdo con Chomycz: <br> <br>
+      </p>
+    </div>
+    <div class="col-sm-8">
+      <h4 id="item-1"> En exteriores </h4>
+      <h5 id="item-2"><strong> Directamente enterrado </strong></h5> <br><br>
+      <p class="pasos-principales">
+        1. Es estrictamente necesario que previamente se investiguen las condiciones de los sedimentos a lo
+                   largo de la ruta del cable, incluyendo si ya existe un cableado subterráneo en el aérea, y todo tipo de
+                    característica que sea un requerimiento a considerar para la instalación. <br> <br>
+                  2. En este caso los cables principales se instalan a una profundidad de entre 1 y 1,2m, pero en áreas
+                   residenciales o urbanas, los cables se pueden enterrar solamente a 0,6m de profundidad. La idea 
+                    principal es que se instalen directamente en surcos arados en caminos, para ser posteriormente
+                     rellenados con un sellador. <br> <br>
+                  3.	La colocación de los cables mediante la excavación se puede realizar excavadoras estáticas o bien
+                   con pequeñas excavadoras vibratorias, pero siempre deben ser excavadoras especiales para el tendido de
+                    cables de fibra óptica. Esto es así porque es posible que las excavadoras para cables de cobre no cumplan
+                    con los requerimientos de fibra óptica en cuanto al soporte para cables, radio de curvatura, tensión o
+                    vibración. <br> <br>
+                     4.	Las zanjas deben hacerse tan rectas como sea posible. <br>
+                     5.	El fondo de la zanja deberá ser plano, nivelado y sin piedras u obstáculos, con un relleno ligero,
+                      sin piedras, alrededor del cable. Esto proporcionará una distribución mejor de la carga del cable, reducirá
+                      el posible daño del cable y disminuirá las perdidas por microcurvaturas. <br> <br>
+                     6.	Se debe tener siempre en cuenta el radio de curvatura mínimo para el cable. <br>
+                     7.	Se requiere que el cable se vaya deslizando cuidadosamente en el canal de cable del equipo de excavación,
+                      para reducir la tensión. <br> <br>
+                     8.	Los cables enterrados pueden ser empalmados en cierres que están enterrados a lo largo del trazado del cable 
+                      o bien colocados sobre tierra en un pedestal. En todos los extremos de cable donde se necesite hacer un empalme
+                       o una terminación, se debe dejar un largo de cable apropiado, generalmente una tramo adicional de 30-60 pies
+                       (10-20 metros) para realizar el empalme en un remolque o una carpa sobre tierra. <br> <br>
+                     9.	Es imperativo colocar un aviso de que en esa zona existe un cable enterrado, para alertar a las futuras
+                      operaciones de cavado. Se recomienda también en áreas de alta densidad de tráfico, instalar pequeñas losas de 
+                      hormigón, cintas especiales detectables, o los marcadores que se encuentran en el mercado que se sitúan por 
+                       encima del nivel del suelo. Cuando el conducto y los cables son completamente dieléctricos, la FOA recomienda
+                       que el marcador o cinta conductora de señalización no debe estar enterrada a más de 300mm (12 pulgadas) por
+                       debajo de la superficie. <br> <br>
+                    10.	Como se dijo en la etapa de diseño, para cable directamente enterrado, se deben seleccionar cables con una 
+                     pesada cubierta blindada que proporciona resistencia al aplastamiento y protección contra roedores. Además, cuando 
+                     se utilice un blindaje conductor, como el acero o aluminio, el cable deberá llevarse a tierra en los puntos
+                     terminales y a la entrada de los edificios. <br> <br>
+      </p>
+      <center><img class="img-fluid" src="./images/Zanja del cable.png" alt="Estructura de Zanja" title="Estructura de Zanja"> <br></center> 
+      <h4 id="item-3">Por conductos o sistemas de canalización </h4> <br><br>
+      <p class="pasos-principales">
+        Consiste en la colocación del cable de fibra en conductos ya existentes, nuevos, o canalizaciones,
+        las llamadas tanquillas o vías generales de telecomunicaciones. <br>
+        La mayoría de las canalizaciones y tuberías se construyen con polietileno de alta densidad (PEAD),
+        PVC o un compuesto epoxy de fibra de vidrio. Este caso, por necesitar distintas consideraciones, se
+        seccionará el contenido por cada aspecto a tratar. <br> <br>
+        Se recomienda que antes de pasar al procedimiento de tendido del cable de fibra, se consulten las secciones: <br><br>
+        <a href="conductos-subconductos.html" >Conductos y Subconductos</a> <br>
+        <a href="traccion.html">Cinta y caja de tracción</a> <br> <br>
+        <strong>Procedimiento de Instalación del Cable</strong> <br><br>
+        1.	Abrir todas las tanquillas y asegurarse de que están en buenas condiciones y despejadas. <br> <br>
+        2.	Identificar cuales conductos se van a usar, y limpiar de ser necesario. <br> <br>
+        3.	Si ya hay cables en los conductos elegidos se debe identificar qué tipo de cable y contactar con el propietario
+         para informar del proceder. <br><br>
+        4.	Para minimizar las tensiones, se deberá colocar las bobinas o carretes de fibra cerca de las curvas más pronunciadas,
+        de forma que los puntos de arrastre y colocación de las bobinas deberían estar en las arquetas de las esquinas. Además es
+        importante tener en cuenta que cuando se tiende un cable alrededor de una curva, existe una presión añadida sobre la pared
+        del conducto y una presión de compresión sobre el cable. <br> <br>
+        5.	Identificar las arquetas subterráneas de arrastre y las bobinas. Montar todo el equipamiento adecuadamente, de forma que:
+        <ul style="list-style-type: none">
+          <li>-	La polea de tracción del cable debe equiparse con un registrador de tensión y con una pantalla electrónica dinámica,
+             de modo que la velocidad de la polea pueda ser controlada.</li>
+          <li>-	Se debe instalar en la arqueta de alimentación un collar lubricante y un tubo de alimentación.</li>
+          <li>-	Se deberá instalar en la arqueta de tendido una polea de tamaño adecuado</li>
+          Más o menos debería quedar un sistema de tracción de la siguiente manera: <br><br>
+          <center><img class="img-fluid" src="./images/Sistema de traccion de cable.PNG" alt="Sistema de Tracción" title="Sistema de Tracción"></center>  
+        </ul>
+      </p>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+      <p class="pasos-principales">
+        6.	Antes de arrastrar el cable y mientras éste esté todavía en el carrete, se deberán examinar todas las fibras ópticas del
+        cable (hilos) con un OTDR que se explicará más adelante, y un adaptador de fibra desnuda, para asegurarse de que son aceptables. <br> <br>
+        7.	Si se va a colocar el cable en subconductos o conductos internos, se deben seguir los siguientes lineamientos: <br> </p>
+        <ul style="list-style-type: none">
+         <li>-	Posicionar el carrete de subconductos de tal manera que no haya obstrucciones.</li>
+         <li>-	Atar al subconducto con un eslabón giratorio, la polea de arrastre adecuada y atar la cinta de arrastre al orificio</li>
+         <li>-	Tire a mano del subconducto tanto como sea posible. Aplique lubricante de ser necesario.</li>
+         <li>-	Donde no se pueda tirar a mano, se deberá arrastrar con un torno, cuidando de no exceder la tensión máxima del subconducto.</li>
+         <li>-	Puede ser necesario el uso de poleas en las curvas o esquinas, para proporcionar el soporte adecuado al subconducto.</li>
+         <li>-	Si se utilizan subconductos corrugados, se le debe dar el tiempo suficiente para que recupere su forma normal, por lo tanto, <br>
+            no se debe cortar inmediatamente después de haber completado el tendido.</li>
+         <li>-	Es necesario, según las especificaciones del subconducto, dejar una longitud suficiente de subconducto para el montaje.</li>
+        </ul>
+        <p class="pasos-principales">
+          8.	Atar el cable adecuadamente a la polea de arrastre y al eslabón giratorio. Asegurarse de que tanto la polea como el eslabón
+          se pueden ajustar fácilmente a todos los conductos y subconductos. <br> <br>
+          9.	Atar la cinta de arrastre instalada al eslabón giratorio. <br> <br>
+          10.	Ajustar, si se requiere, el radio de la polea y el cabrestante. <br> <br>
+          11.	Añadir lubricante generosamente al alimentador del cable y a cualquier posición intermedia, arrastrar el tendido a mano, y en caso de
+           que se haga muy difícil, tirar del cable con el torno a baja velocidad, evitando los movimientos de vibración. <br> <br>
+          12.	Girar el carrete del cable a mano, para mantener la suficiente holgura entre el carrete y el collar de alimentación. <br> <br>
+          13.	Ya que se requieren tensiones mayores para comenzar a arrastrar un cable que para mantenerlo en movimiento, se deben evitar las acciones
+           del tipo tirar y parar. <br> <br>
+          14.	Si la tensión del cable se acerca al máximo permitido, puede ser por causa de bajos niveles de lubricante u otras dificultades, en ese
+          caso se debe parar y chequear la verdadera causa: Inspeccionando de cerca cada curva, que el carrete gira de forma adecuada, agregando más 
+          lubricante, reducir la longitud de arrastre, asegurándose de que siempre hay tres o más metros de cable saliendo fuera del torno intermedio
+          antes de volver a entrar a la arqueta. <br> <br>
+          15.	Continuar el tendido hasta que se arrastre un trozo suficiente de cable que permita los empalmes fuera de la tanquilla de tendido, y como
+          puede que sea necesario más cable, siempre es recomendable dejar una reserva de fibra que dependerá del diseño de ingeniería de la red. <br> <br>
+          16.	Después de que se haya dejado en el extremo un tramo suficiente de fibra óptica, se debería cortar de la bobina, y examinarse con un OTDR. <br> <br>
+          17.	Finalmente almacenar el tendido dentro de la tanquilla. <br> <br>
+          18.	Como sugerencia se recomienda realizar un etiquetado de cada cable de fibra y situarlo en cada tanquilla, donde se identifique el tipo de
+           cable, propietario y número de teléfono del propietario. <br> <br>
+        </p>
+        <h4 id="item-4">Vía aérea</h4> <br><br>
+       <p class="pasos-principales"> 1.	En primer lugar se enumeran las líneas de seguridad para una instalación aérea: <br> <br></p>
+        <ul style="list-style-type: none">
+          <li>-	Asegurarse de que todo el personal ha sido preparado adecuadamente para trabajar en postes o torres eléctricas.</li>
+          <li>-	Verificar que el cable cumple con las especificaciones de radiación de campo eléctrico.</li>
+          <li>- Se deben desconectar todas las líneas de potencia.</li>
+          <li>- No se deben instalar los cables cuando el ambiente sea húmedo</li>
+          <li>- Todos los cables, hasta los completamente dieléctricos, que se instalen cerca de líneas de alta tensión, se deben llevar a tierra. </li>
+          <li>- Se debe mantener una distancia de seguridad entre el cable de fibra óptica y el cable de potencia.</li>
+        </ul>
+        <p class="pasos-principales">
+          2.	Preparar el equipamiento, instalar el cable guía y el fijador al fiador de acero instalado entre postes. El cable guía debería mantenerse
+          4 pies por delante del fijador con una barra rígida. Asegurarse que la curvatura del cable guía es suave y mayor que el radio mínimo de instalación 
+          del cable, o en su defecto, utilizar una polea. <br> <br>
+          3.	Elevar el cable de fibra hasta el cable guía y hasta el fijador, asegurándose de, mantener la bobina al menos 15m separada del fijador, cuidando
+           el radio de curvatura. <br> <br>
+          4.	En aquellos puntos donde la fibra se va a amarrar al fiador junto con otros cables ya existentes hay que asegurarse de que la maquina fijadora 
+          puede acomodar otros cables. En caso contrario, el cable se puede atar o fijar manualmente desde la vagoneta del camión. <br> <br>
+          5.	Para mantener temporalmente el cable sobre el fiador, se debe atar al fiador en la abrazadera. Una vez que el cable está en su lugar, se amarra
+          al fiador, y antes de instalarlo se deben considerar factores como el número de cables, apariencia, radio de curvatura, ruta del cable dentro del
+          edificio y la seguridad. <br> <br>
+          6.	Debido a las propiedades de la fibra, se dilata o contrae muy poco cuando varía la temperatura, por lo tanto, para reducir la tensión de un cable
+          de fibra óptica que se haya unido a un fiador de acero, se añade una pequeña vuelta de expansión, de modo que siempre y cuando se alcance un poste
+          debería detenerse el tendido. Se desconectan el fijador y la guía y se mueven al otro lado del poste. Es así como el hilo del fijador se termina con una
+          abrazadera y se forma con el cable un lazo de expansión. Que según Chomycz (2011) la longitud de la vuelta del lazo D debería ser dos veces mayor que su
+          profundidad R, y que el radio de curvatura mínimo del cable. Los cables autosoportados no requieren lazos de expansión. <br>  <br>
+         <center> <img class="img-fluid" src="./images/Lazo de expansion.PNG" alt="Lazo de Expansión" title="Lazo de Expansión"> <br><br></center></p>
+         <p class="pasos-principales">
+          7.	Comenzar la operación de estirar a mano tirando del fijador a una velocidad constante y conduciendo el vehículo que lleva el carrete de tal manera que
+          este a 50 pies del fijador. Mantener una ligera tensión sobre el cable y el carrete del cable por debajo del fiador en todo momento, para evitar que el cable
+          de fibra se enrolle alrededor del fiador. <br> <br>
+          8.	Cuando se alcance un poste debería detenerse el tendido, se desconectan el fijador y la guía y se mueven al otro lado del poste. El hilo del fijador se
+          termina con una abrazadera y, de ser requerido, se forma con el cable un lazo de expansión. <br> <br>
+          9.	Instalar etiquetas de aviso del cable de fibra óptica.  <br> <br>
+         </p>
+         <a name="interiores"></a>
+         <h4 id="item-5">En Interiores</h4>
+         <h5 id="item-6">Cableado vertical</h4><br><br>
+         <p class="pasos-principales">
+          1.	Una consideración importante en las instalaciones verticales es que el peso del cable crea por sí mismo una tensión de carga sobre él, que no debería exceder
+          la máxima permitida por el fabricante, la sujeción del cable a un soporte en puntos intermedios puede reducir la carga de tensión del cable.
+        De no ser posible la sujeción a lo largo del cable, se pueden utilizar soportes colgantes para suspenderlo, al final del recorrido o en puntos intermedios, sin que los mismos
+        dañen o deformen el cable. Es muy común elegir el manguito mallado, o soporte colgante de manguito mallado, para este fin.
+        Además, siempre es preferible lanzar el cable desde arriba, que empezar la instalación de abajo hacia arriba, para minimizar las tensiones. <br> <br>
+        2.	Identificar y abrir todas las cajas de tracción, conductos y bandejas de cable, y asegurarse de que no están obstruidas y de que cumplen con todos los requerimientos del
+        cable de fibra óptica. <br> <br>
+        3.	Si el cable se va a instalar en conductos o bandejas que contienen cables, se deben identificar y comunicarse con los respectivos propietarios. <br><br>
+        4.	Se instala en la ruta completa del conducto-bandeja un tramo continuo de cinta de tracción.  <br> <br>
+        5.	Antes de proceder a la instalación se debería probar el funcionamiento del cable. <br><br>
+        6.	Atar al cable el orificio de tendido y el eslabón giratorio. Asegurarse de que tanto el orificio de tendido como el conjunto del eslabón giratorio no tienen esquinas afiladas
+        y se pueden fijar fácilmente a lo largo de todos los conductos, cajas de tracción y bandejas de cable. <br><br>
+        7.	Atar la cinta de tracción instalada al eslabón giratorio. <br><br>
+        8.	A lo largo de la primera sección, se recomienda tirar a mano del cable hacia afuera de la primera caja de tracción. Al tirar del cable a lo largo de las secciones del conducto, 
+        se debe asegurar de que las torceduras del cable son mayores en todo momento que el radio de curvatura mínimo del cable, y de ser necesario, se debe añadir lubricante, a fin de
+        evitar daños al cable. <br><br>
+        9.	Para evitar torsiones se suele formar, la ya mencionada en secciones anteriores, figura en 8, con el cable, para continuar con la tracción. <br><br>
+        10.	Se continúa este procedimiento a través de todas las cajas de paso y conductos necesarios, hasta que se haya instalado por completo todo el tendido de fibra óptica. <br><br>
+        11.	Dependiendo del diseño de la red, siempre es recomendable dejar un fondo de reserva de cable de fibra óptica, que normalmente oscila entre el 20% o 30% del total. <br><br>
+        12.	Finalmente, se considera una buena práctica, realizar la certificación del cable para asegurarse de que el funcionamiento es enteramente óptimo. <br><br>
+        </p>
+        <h4 id="item-7">Buenas prácticas de instalación</h4>
+        <p class="pasos-principales">
+          El siguiente video tutorial muestra las principales recomendaciones para las instalaciones de redes de fibra óptica, que deben considerarse en cualquiera de los entornos donde se desarrolle. <br><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/GFy2XRNotoE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+    </div>
+  </div>
+</div>    
+<footer
+              class="text-center text-lg-start text-white float-start w-100"
+              style="background-color: #0c0e11"
+              >
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <a  href="index.html">
+                  <img src="images/Optical3.png" width="250px" height="63px" class="d-inline-block align-top" alt="Logo">
+                </a>
+                <p>¡Guía cada paso en la construcción de tu red óptica!</p>
+              </div>
+              <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-6">
+                <h6 class="text-uppercase fw-bold">OBJETIVO</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color: rgba(18, 15, 190, 0.952); height: 3px"
+                    />
+                    <p>
+                      Optimizar los procesos concernientes al diseño e instalación de las redes de fibra óptica, con nuestras guías para cada etapa,
+                y el programa de toma de decisiones. Impulsando su funcionamiento y disminuyendo posibles fallas.
+                    </p>
+              </div>
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase fw-bold">CONTACTO</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color:rgba(18, 15, 190, 0.952); height: 3px"
+                    />
+                <p><i class="fas fa-home mr-3"></i> Proyecto realizado para optar al título de Ing. Telecomunicaciones.</p>
+                <p><i class="fas fa-envelope mr-3"></i><img src="./images/logoUjap.svg" alt="Logo Ujap" style="width: 32px; height: 32px;"> Universidad José Antonio Páez.</p>
+                <p><i class="fas fa-phone mr-3"></i><img src="./images/email.png" alt="email"> karibb8900@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+             class="text-center p-2"
+             style="background-color: rgba(4, 3, 100, 0.281)"
+             >
+            <p> &copy;2022 Optical | Karina Bierkamp</p> 
+        </div>
+      </footer>       
+</body>
+</html>

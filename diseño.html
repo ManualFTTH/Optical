@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sugerencias, consideraciones y procedimientos que sientan
+     las bases del diseño de redes FTTH, según aspectos claves como localización geográfica, 
+     densidad de usuarios, estructuras y tipos de instalación, arquitectura de la red, distribución,
+      entre otros. Basados en estándares y recomendaciones internacionales.">
+    <meta name="keywords" content="Diseño, redes, FTTH, estandares, procedimientos, recomendaciones">
+    <meta name= "author" content="Karina Bierkamp">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+      </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@284&family=PT+Sans&family=Roboto+Serif:ital,wght@1,500&display=swap');
+        </style>
+    <title>Etapa de Diseño</title>
+    <link rel="shorcut icon" href="favicon.png">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/Optical3.png"  height="65px" class="d-inline-block align-top" alt="Logo">
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav text-center">
+          <a class="nav-item nav-link" href="levantamiento.html">Levantamiento </a>
+          <a class="nav-item nav-link active" href="#">Diseño</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Instalación
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="conductos-subconductos.html">Conductos y Subconductos</a></li>
+              <li><a class="dropdown-item" href="conductos-subconductos.html#lubricante">Lubricante</a></li>
+              <li><a class="dropdown-item" href="traccion.html">Cinta y Caja de Tracción</a></li>
+              <li><a class="dropdown-item" href="empalme.html">Empalme</a></li>
+              <li><a class="dropdown-item" href="instalacion.html#exteriores">En Exteriores</a></li>
+              <li><a class="dropdown-item" href="instalacion.html#interiores">En Interiores</a></li>
+              <li><a class="dropdown-item" href="terminacion.html">Terminación de Fibra</a></li>
+            </ul>
+          </li>
+          <a class="nav-item nav-link" href="certificacion.html">Certificación</a>
+          <a class="nav-item nav-link" href="software.html">Optical Decisions</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <header class="header-diseno">
+      <h1 class="titulo-header"><strong>Etapa de Diseño</strong> </h1><br>
+            <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+</header>
+<nav class="nav flex-column float-start sticky-top d-none d-xl-block d-lg-block w-40" style="background-color:  rgb(8, 7, 58)">
+  <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;"> --- </a>
+    <a class="nav-link" href="#"style="color:rgb(8, 7, 58) ;"> --- </a>
+  <a class="nav-link active text-light" aria-current="page" href="diseño.html" style="font-size:x-large"><b>Diseño</b> </a>
+  <a class="nav-link text-light" href="#item-1"style="font-size: large;">Primeros pasos</a>
+  <a class="nav-link text-light" href="#item-2"style="font-size: large;">Porcentaje de cobertura</a>
+  <a class="nav-link text-light" href="#item-3"style="font-size: large;">Arquitectura de la red</a>
+    <a class="nav-link text-light" href="#item-4"style="font-size: large;">Reserva de puertos</a>
+    <a class="nav-link text-light" href="#item-5"style="font-size: large;">Cálculo de Splitters</a>
+    <a class="nav-link text-light" href="#item-6"style="font-size: large;">Elección de la fibra</a>
+    <a class="nav-link text-light" href="#item-7"style="font-size: large;">Reserva de fibra</a>
+    <a class="nav-link text-light" href="#item-8"style="font-size: large;">Digitalización de la red</a>
+    <a class="nav-link text-light" href="#item-9"style="font-size: large;">Cálculo de potencia <br> óptica</a>
+    <a class="nav-link text-light" href="#item-10"style="font-size: large;">Diagrama Unifilar</a>
+    <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+</nav>
+<div class="container-fluid">
+  <div class="row ">
+    <div class="col-sm-10 justify-content-center"> 
+      <main>
+         Según la FOA (Fiber Optic Association) realmente no hay forma de generalizar sobre
+        el proceso de diseño de redes de fibra hasta el hogar (FTTH), o cualquier red de fibra
+              óptica, ya que cada sistema es único. Sin embargo, según algunas características como la
+               geografía, la cantidad de posibles suscriptores al servicio y/o condiciones técnicas, se
+                pueden seguir una serie de pasos que ayudarían a realizar un diseño eficiente de la red <br>
+    </main>
+    <br><br><br>
+    </div>
+  </div>
+</div>
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-sm-8">
+        <h4 id="item-1">Primeros pasos</h4>
+          <p class="pasos-principales">
+            <br><br>
+          1.	En primera instancia se debe recibir el croquis realizado por los técnicos en la fase de
+           levantamiento, es importante verificar que toda la información descrita en la etapa anterior
+            esté contenida en el informe.<br> <br>
+          2.	Es necesario tener un soporte de todos los croquis que son entregados en el departamento
+           de diseño, con cada dato suministrado sobre el urbanismo, además de la fecha de entrega, si
+            será necesario realizar procedimientos de permisología para VGT`s (Vías Generales de Telecomunicaciones),
+             el nombre del técnico que realizó el levantamiento y del Ingeniero o Diseñador a cargo de hacer el diseño. <br> <br>
+          3.	Se sugiere que la empresa haga uso de un sistema de información geográfica, como Google Earth,
+           como herramienta para la ubicación del urbanismo o localidad donde se va a realizar el trabajo,
+          con fines de sustentar en un mapa y verificar que lo dibujado en el croquis esté en perfecta
+          concordancia con la realidad, considerando las distancias, calles, coordenadas, la existencia de cables
+          troncales o subtroncales, además de nodos GPON, NAP de distribución o de usuario cercanos, que tengan 
+          puertos disponibles y que puedan resultar de utilidad en el diseño. <br> <br>
+        </p>
+        <h4 id="item-2"> Porcentaje de cobertura </h4>
+        <p class="pasos-principales">
+          <br><br>
+          4.	Uno de los datos más importantes y que tiene que ser muy detallado, es la cantidad total de usuarios
+          o viviendas presentes, y la distribución de los mismos. <br> <br>
+          5.	Definir qué porcentaje de ese total de usuarios se desea cubrir, según la demanda en la zona, los
+           lineamientos de factibilidad de la empresa, o bien, las metas de expansión del servicio en el área. De
+            forma que: <br>
+        </p>
+         
+  <br>
+  <p class="pasos-principales">
+    <p>$OI$: $Oferta$ $inicial$ $de$ $cubrimiento.$</p>
+    <p>$HP$: $Total$ $de$ $viviendas$ $en$ $la$ $zona$ $levantada.$</p>
+    <p>$p$: $Porcentaje$ $inicial$ $de$ $cubrimiento.$</p>
+    <p class="text-center">$OI= HP\cdot p$</p> <!--ARREGLAR-->
+       <br>
+      Ejemplo: <br>
+       HP: 50; p: 30% <br>
+      
+      OI=50∙0,3 <br>
+      OI=15 <i> usuarios a cubrir inicialmente</i> <br>
+       <br> <br>
+  </p> 
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-sm-8">
+        <h4 id="item-3">Arquitectura de la red</h4> <br><br>
+        <p class="pasos-principales">
+          6. Una vez comprendida la densidad y distribución en la red, es necesario seleccionar un tipo de
+          arquitectura que se ajuste a los requerimientos específicos, y ya que no todos los casos son iguales,
+           se establecen rangos recomendados que pueden ser aplicados como normativa general. <br>
+           <br>
+           <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-sm-12">
+                <div class="card" style="border-left: darkgoldenrod; border-left-width: 5px; border-style: solid;" >
+                  <div class="card-header" style="font-family: 'PT Sans', sans-serif; font-size: medium;"  >
+                     <i> <b>Consideraciones importantes</b> </i> 
+                  </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                      <p style="font-weight: 400; font-size: smaller;"> Entendiéndose por arquitectura, los niveles de distribución y splitteo de la red, la FOA, basada en
+                        el estándar ITU-T G984.X, recomienda no exceder de 32 usuarios por puerto OLT, considerando
+                         como máximo una división de 64 usuarios. Esto puede lograrse con el uso de splitters, con una 
+                          distribución desde 1 a 3 niveles. Es decir, se pueden combinar splitters de 1:2 y 1:16 o 1:4 y 1:8, 
+                           como se muestra en la figura a continuación, siempre y cuando no exceda del límite recomendado. </p>
+                    </blockquote>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+         <br> <br>
+        <center><img class="img-fluid" src="./images/Relacion de Splitters.png" alt="Combinacion de Splitters" title="Combinacion de Splitters"></center>  <br> <br>   </p>
+        <p class="pasos-principales">
+          Sin embargo, un aspecto importantísimo, que el personal de TI de la empresa debe informar al área de 
+          Diseño de red son las capacidades del hardware, en este caso, la capacidad de usuarios por puerto que 
+          tolera la OLT a la que se conectara la red a diseñar, casi siempre permiten un radio máximo de splitteo de 1:128. <br><br> 
+          Ahora bien, en cuanto a los niveles, usualmente se usan topologías en cascada, es decir, que tienen más de dos 
+          niveles de división, lo que permite ahorrar costes, se aprovecha una mayor cantidad de puertos, de fibra, y el 
+          retorno de la inversión es más rápido, sin embargo, la arquitectura centralizada es altamente recomendada en 
+          paquetes empresariales que exigen una conexión dedicada con un mayor ancho de banda, directamente desde el 
+          Head-End u Oficina Central del proveedor. <br><br>
+          Es importante destacar que el departamento de Diseño y el de TI deben trabajar en conjunto para el dominio de 
+          las capacidades de la red, con fines de hacer un diseño lo suficientemente óptimo, que garantice una instalación 
+          eficiente, con menos margen de error, y además, permita el crecimiento de la empresa. <br><br></p>
+           <h4 id="item-4">Reserva de puertos</h4> <br><br>
+           <p class="pasos-principales">
+            7.	Una práctica recomendable en el diseño de redes es dejar reservas que permitan la expansión de la misma, y
+            la cantidad de puertos disponibles no debe ser una excepción, FOA recomienda que de la cantidad total de puertos 
+            diseñados se adicione un 20 o 25% más. Es decir, si la cantidad total de usuarios proyectados en una residencia es
+            de 100, y el porcentaje de cobertura elegido es del 40%, es decir, solo 40 de esos usuarios, a esta cifra se le 
+            debe agregar el 20 o 25%, significando que la cantidad total de puertos recomendados para diseñar es para un total de 48 usuarios. <br> <br>
+           </p>
+            <h4 id="item-5">Cálculo de Splitters</h4> <br><br>
+          <p class="pasos-principales">
+           8.	Una vez que se tiene el cálculo de los puertos requeridos, incluyendo el porcentaje de reserva, y considerando 
+            los niveles y división elegidos para la arquitectura de la red, se procede a calcular cuántos splitters se instalarán
+            en cada nivel, y la cantidad de NAPs. De forma que: <br><br>
+           <p> $n$: $Radio$ $de$ $división$ $de$ $splitter$ $de$ $primer$ $nivel.$ <br></p>
+           <p>$N$: $Radio$ $de$ $división$ $de$ $splitter$ $de$ $segundo$ $nivel$ $(el de usuario).$ <br></p>
+           <p>$P$: $Cantidad$ $de$ $puertos$ $requeridos.$ <br></p>
+           <p>$S_{1}$: $Splitter$ $de$ $primer$ $nivel.$ <br></p>
+           <p>$S_{2}$: $Splitter$ $de$ $segundo$ $nivel.$ <br> <br></p>
+          <p class="text-center"> $S_{2}=\dfrac{P}{N}$</p>  <br> <br> 
+           <p class="text-center">$S_{1}= \dfrac{S_{2}}{n}$</p> <br><br></p> 
+        <p class="pasos-principales">
+          En algunas ocasiones, se deben considerar los siguientes aspectos: <br><br>
+          -   Cuando S1 es decimal, y el decimal es menor a 5, se sugiere que se redondee por debajo,
+           aunque eso signifique sacrificar unos pocos puertos, es preferible esperar la demanda de
+            usuarios para aumentar la cantidad de puertos finales. <br>
+          -  Cuando S1 es decimal, y el decimal es igual o mayor a 5, obligatoriamente se debe redondear 
+           hacia el siguiente numero entero, porque de lo contrario se va a diseñar muy por debajo del
+          porcentaje de cobertura establecido. <br>
+          -   Siempre es necesario estudiar muy bien la demanda real en el sector y trabajar en base a eso,
+           para evitar la pérdida de recursos y sobre todo, puertos GPON en la OLT. <br><br>
+           Con respecto a la ubicación de los splitters, se recomienda que los splitters de mayor radio se
+            coloquen lo más cercano al usuario posible, para evitar que se utilicen fibras con mayor cantidad de hilos
+             en el nivel de distribución, contribuyendo al ahorro de costos, y a la eficiencia de repartimiento del servicio. <br><br>
+           <h4 id="item-6"> Elección de la fibra</h4><br><br>
+           <p class="pasos-principales">
+            9.	El siguiente paso es elegir el elemento principal de la red, la fibra óptica. Existen muchas opciones, 
+            y la elección estará determinada según la longitud del enlace, la velocidad de transmisión, la longitud de 
+            onda de los transmisores, la técnica de multiplexado, y además, el entorno donde el cable será instalado, 
+            por conducto subterráneo, directamente enterrado, o aéreo. Y, aunque hay diferentes designaciones para
+            describir el tipo de fibra, según la IEC (Comisión Electrotécnica Internacional), la TIA (Asociación de 
+            la Industria de Telecomunicaciones) y la ITU (Unión Internacional de Telecomunicaciones), las más comúnmente 
+            usadas son las de esta última. <br> <br>
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-sm-12">
+                  <div class="card" style="border-left: darkgoldenrod; border-left-width: 5px; border-style: solid;" >
+                    <div class="card-header" style="font-family: 'PT Sans', sans-serif; font-size: medium;"  >
+                       <i> <b>Consideraciones importantes</b> </i> 
+                    </div>
+                  <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                        <p style="font-weight: 400; font-size: smaller;"> Por normativa general, la FOA considera una buena práctica, que los enlaces de las redes se realicen 
+                          con fibra monomodo, desde la etapa troncal hasta la de acceso al abonado, gracias a sus bondadosas
+                          prestaciones, que alcanzan distancias hasta 40Km sin sufrir atenuaciones de gran magnitud, siendo capaces
+                          de transportar los datos a altas velocidades, y trabajando a ventanas ópticas que van desde los 1310nm a los
+                          1625nm, además de ser menos costosas que las multimodo.</p>
+                      </blockquote>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <p class="pasos-principales"> Los estándares son: <br> <br></p>
+             
+            <center><img class="img-fluid" src="./images/Estandares Fibra Monomodo.PNG" alt="Estandares ITU para fibras monomodo" title="Estandares ITU para fibras monomodo"></center> <br><br><br>
+           </p>
+           
+          <p class="pasos-principales">
+            <b>- Distancias menores a 550m:</b> Se recomienda el cable de fibra multimodo del tipo OM3 u OM4 de 50/125 μm 
+            bajo el estándar ITU-T G.651.1 <sup>1</sup>, que admite el uso rentable de sistemas Ethernet de 1Gb/s, generalmente
+             con transceptores de 850nm.  Sin embargo, es preferible en aplicaciones de cableado como Redes de Area
+              Local (LAN), o en general, de planta interna. <br> <br>
+            <b>- Entorno de construcción subterráneo (por conducto o directamente enterrada a través de canalizaciones 
+            especiales por zanjado):</b> El cable recomendado para este tipo de instalación subterránea es el cable 
+            armado, gracias a la manera en que está estructurado, con una chaqueta de polietileno, armadura de acero
+            corrugado y dos guías de acero, es resistente a fuertes condiciones ambientales, y a daños contra 
+            roedores, además de contar con alta resistencia mecánica. <br> <br>
+          </p>
+         <center><img class="img-fluid" src="./images/Cable Armado.PNG" alt="Cable Armado" title="Cable Armado"></center>  <br><br>
+         <p class="pasos-principales">
+          <b>- Construcciones aéreas:</b>  En este caso, el más recomendado es el ADSS (All-Dielectric Self Suported),
+           con capacidades de 6 a 256 hilos, que consta de una configuración consta de fibras de aramida que aumentan
+          su resistencia a la tracción, hilos protectores contra el agua. Además cuenta con una guía central que da
+          una alta resistencia al aplastamiento, ademas de permitir la instalacion aérea sin necesidad de soportes
+          externos, conocidos comúnmente como mensajeros. Y su chaqueta exterior lo hace resistente a los rayos UV. <br> <br>
+         <center><img class="img-fluid" src="./images/Cable ADSS.PNG" alt="Cable ADSS" title="Cable ADSS"></center>  <br><br><br>
+         </p>
+         <p class="pasos-principales">
+          - Utilice cables locales enumerados que sean inflamables según las clasificaciones NEC 770.50:
+          OFN, fibra óptica no conductiva.
+          <ol style="list-style-type: square">
+          <li>OFC, fibra óptica conductiva.</li>
+          <li>OFNG u OFCG de propósito general.</li>
+          <li>OFNP u OFCP para uso en cámaras de aire acondicionado.</li>
+          <li>OFN-LS, para baja densidad de humo.</li> <br>
+          </ol> 
+         </p>
+         <h4 id="item-7">Reserva de fibra</h4> <br><br>
+          <p class="pasos-principales">
+            10. La cantidad de hilos de la fibra vendrá dada por el número de NAPs y usuarios finales, más una
+            cantidad de reserva, aunque sea del 20% del total, para responder a posibles daños, y futuras expansiones. Además de la reserva de hilos, se debe considerar una reserva de entre 10% y 20% del total de longitud del
+            cable, no solo para la ampliación de la red, sino porque también cada punto de empalme y conectores adicionales
+           consumen metros de fibra. <br><br> </p>
+           <h4 id="item-8">Digitalización de la red</h4> <br><br>
+           <p class="pasos-principales">
+            11.	Se digitaliza finalmente la red, preferiblemente en AutoCad, trazando la ruta de fibra con la ubicación
+            de las NAPs de distribución (primer nivel) y las NAPs de usuario (segundo nivel). Una consideración importante
+            es que, hay ocasiones en las que las cajas de empalme no se pueden colocar en postes o VGT por cuestiones legales,
+            en estos casos se recomienda hacer uso de pedestales para alojar las cajas de empalme. <br><br>
+           </p>
+           <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-sm-12">
+                <div class="card" style="border-left: darkgoldenrod; border-left-width: 5px; border-style: solid;" >
+                  <div class="card-header" style="font-family: 'PT Sans', sans-serif; font-size: medium;"  >
+                     <i> <b>Consideraciones importantes</b> </i> 
+                  </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                      <p style="font-weight: 400; font-size: smaller;"> Es importante que se maneje una nomenclatura de símbolos, y estándares para la digitalización
+                        de cada plano dentro de la empresa, con fines de hacerlo completamente entendible con solo revisar una leyenda. 
+                        Se consideran casos especiales cuando para algún proceso de permisología legal, el ente o la empresa en cuestión,
+                        exige usar una nomenclatura diferente a la utilizada en la propia empresa.</p>
+                    </blockquote>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+             <br> <br>
+            <h4 id="item-9">Cálculo de potencia óptica</h4> <br><br>
+            <p class="pasos-principales">
+              12.	Calcular de forma teórica el presupuesto de potencia óptica y el presupuesto de perdida en el enlace que <br>
+              se está diseñando. <br> <br>
+              <ol style="list-style-type: none">
+                <li> <strong>- Presupuesto de potencia Óptica:</strong> Es la diferencia entre la potencia de salida del
+                     transmisor y los requisitos de potencia de entrada del receptor. <br> <br>
+                    <center>
+                        <img class="img-fluid" src="./images/Presupuesto de potencia optica.PNG" alt="Presupuesto de Potencia Optica" title="Presupuesto de Potencia Optica">
+                    </center> 
+                     <br> <br>
+                    <center> 
+                        $T_{x}$: $Potencia$ $máxima$ $de$ $transmisión$ $de$ $la$ $OLT$. <br>
+                        $R_{x}$: $Sensibilidad$ $de$ $recepción$ $mínima$ $en$ $la$ $ONT$. <br><br>
+                        $Presupuesto$ $de$ $potencia$ $óptica$ = $R_{x}$ - $T_{x}$
+                    </center> <br>
+                    Este parámetro indica el límite de pérdidas que tolera la red, sin embargo, una práctica recomendada 
+                    es que haya un margen de resguardo que maneje la empresa, siendo optimo unos +3dB, esto quiere decir 
+                    que si el presupuesto de potencia óptica es igual a -30dB, aplicándole el margen de resguardo, en realidad
+                    el límite no se debería exceder de -27dB. <br>
+                </li>
+                <li>
+            </p>
+            
+                 <strong>- Presupuesto de pérdida:</strong> Es el cálculo y la verificación de las características operativas
+                  de un sistema de fibra óptica, incluyendo las pérdidas insertadas por cada elemento del enlace, incluyendo
+                  conectores, empalme, la propia fibra, y los splitters. A continuación se detallan valores estimados para
+                  cada elemento según el estándar EIA/TIA 568 <sup>1</sup>: <br><br>
+                  <ol style="list-style-type: circle;">
+                     <li>
+                         <b>Tipo de fibra: </b>  De forma general se puede describir por la siguiente tabla. <br> <br>
+                         <img class="img-fluid" src="./images/perdida por fibra.png" alt="Atenuación por Fibra" title="Atenuación por Fibra"> <br> <br>
+                         Sin embargo, si se quiere precisión según el estándar específico de fibra a utilizar, se puede consultar 
+                          el siguiente link que contiene tablas con las especificaciones geométricas, mecánicas y ópticas de cada una. <br> <br>
+                          <div class="d-grid gap-2 justify-content-right mx-auto">
+                            <a class="btn btn-primary btn-lg" href="https://www.c3comunicaciones.es/Documentacion/Alcance%20fo.pdf" role="button">Especificaciones de estándares de fibra</a>
+                          </div>
+               <br>
+                     </li> 
+                     <li>
+                      <b>Conectores:</b>  De acuerdo con el estándar EIA/TIA 568 la perdida maxima de cualquier conector
+                       es de 0.75dB. Sin embargo, clasificándolos: <br>
+                       <ol style="list-style-type: disc;">
+                          <li>
+                             <b> Multimodo:</b> Entre 0.2 y 0.5dB.
+                          </li>
+                          <li>
+                              <b> Monomodo:</b> Terminados en fabrica y con empalme por fusión entre 0.1 y 0.2dB, en el caso de
+                                los terminados en campo pueden tener pérdidas entre 0.5 y 1dB. 
+                          </li>
+                          <li>
+                             <b>Si no se especifica:</b>  Se usa 0.5dB como promedio de pérdida general aceptado por la ITU. <br> <br>
+                           <b> OBSERVACIÓN:</b>  Al calcular el presupuesto de pérdida óptica, muchos técnicos se olvidan que los conectores 
+                              en el extremo de la red de cables deben incluirse en el presupuesto. Al probar la red de cables, los cables
+                               de referencia se acoplarán con esos conectores y sus pérdidas se incluirán en las mediciones. Existen dos
+                                excepciones: <br><br>
+                                1) cuando el presupuesto de pérdida óptica se compara con las pruebas de pérdida de inserción 
+                                 realizadas con el método de tres cables de referencia, lo que elimina dos conectores de la pérdida medida, o <br><br>
+                                  2) cuando se calcula la pérdida del "canal", es decir, la red de cables instalada de forma definitiva y los
+                                   cables de conexión (patchcords) que se conectan directamente con los transceiver. <br> <br>
+                          </li>
+                          <li>
+                             <b> Empalmes:</b> En promedio se puede considerar de 0.3dB. <br>
+                          </li>
+                          <li>
+                             <b> Splitters:</b> Según el estándar ITU-T G 984.x: <br>
+                             <br>
+                             
+                            <center><img class="img-fluid" src="./images/Perdida por Splitters.PNG" alt="Atenuación por Splitter" title="Atenuación por Splitter"></center>  <br><br>
+                           <p style="text-align: center;"> $Presupuesto$ $de$ $pérdida$ = $d\cdot F + n \cdot E + n \cdot C +  n \cdot S $</p>  <br>
+                           <p style="text-align: start;"> $n:$ Cantidad del elemento.</p>
+                           <p style="text-align: start;"> $d:$ Distancia del enlace.</p>
+                           <p style="text-align: start;"> $F:$ Atenuación (dB/Km) según el tipo de fibra.</p>
+                           <p style="text-align: start;"> $E:$ Atenuación (dB/Km) según el tipo de empalme.</p>
+                           <p style="text-align: start;"> $C:$ Atenuación (dB/Km) según el tipo de conector.</p>
+                           <p style="text-align: start;"> $S:$ Atenuación (dB/Km) según el ratio de splitters</p> <div class="container">
+                            <div class="row justify-content-center">
+                              <div class="col-sm-12">
+                                <div class="card" style="border-left: darkgoldenrod; border-left-width: 5px; border-style: solid;" >
+                                  <div class="card-header" style="font-family: 'PT Sans', sans-serif; font-size: medium;"  >
+                                     <i> <b>Consideraciones importantes</b> </i> 
+                                  </div>
+                                <div class="card-body">
+                                    <blockquote class="blockquote mb-0">
+                                      <p style="font-weight: 400; font-size: smaller;"> Cada valor es multiplicado por la cantidad de metros o kilómetros en el caso de la fibra, o la cantidad de
+                                        elementos como conectores, empalmes o splitters, y luego se suman todos ellos para obtener el presupuesto
+                                         de pérdida total del enlace. <br> <b>Nota: </b>La distancia máxima recomendada entre NAP de usuario, y el punto de la ONT es de 100m con el cable DROP.</p>
+                                    </blockquote>
+                                </div>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+
+                             
+                          </li>
+      
+                       </ol>
+                     </li>
+                  </ol>
+              </li>
+              </ol>
+          <h4 id="item-10">Diagrama Unifilar y Ficha Técnica de construcción</h4> <br><br>
+          <p class="pasos-principales">     
+            14.	Se sugiere, para el control exhaustivo de la red empresarial, realizar un diagrama unifilar de cada red
+            que se construya. Especificando: <br>
+            <ol style="list-style-type: none;">
+               <li> -	Nombre de la red, ubicación. <br></li>
+               <li>-	Nodo del cual está conectado: Con nombre administrativo con el que fue agregado a la base
+                   de datos, numero de puerto y numero de slot en la OLT. <br></li> 
+               <li> -	Cantidad de hilos por cable de fibra. <br></li>
+              <li>-	Hilos usados en cada splitter, con su respectivo color, según la nomenclatura especificada
+               en el estándar TIA 598-A, como está a continuación: <br> <br>
+           <center> <img class="img-fluid" src="./images/Codigo de colores TIA 598A.png" alt="Código de colores TIA598A" title="Código de colores TIA598A"></center> <br><br>
+           </li> 
+           <li>- Enumeración de cada Splitter y NAP usada.</li>
+           <li>- Identificación del radio de división de cada splitter.</li> 
+          <li>- Indicar el nivel al que pertenece cada splitter en la arquitectura (si es de distribución o de usuario),
+            además de la ubicación geográfica del mismo. </li> 
+           <li>- Identificar cualquier detalle adicional como: Mangas, cajas de derivación, sangrado, si hay conexiones
+                con alguna NAP que ya se haya encontrado instalada en algún lugar cercano a la red que se diseñó, o
+                 cualquier otro dato que pudiera ser de importancia en la construcción o para el registro de la red.</li> <br>
+            </ol>   
+          </p>
+          <p class="pasos-principales">
+            15.	Realizar ficha técnica de construcción con todos los datos que resulten de relevancia, a la empresa
+            o contratistas, al momento de construir e instalar la red. Un buen ejemplo se puede descargar en el
+             siguiente link. <br> <br>
+           16.	El departamento de diseño debe llevar un soporte de cada red que se haya diseñado con todos los datos
+          característicos de la misma, así como la fecha en la que fue diseñada, construida, y los responsables. <br> <br>
+          </p>
+         
+      
+      </div>
+        </div>
+  </div>
+  </div>
+</body>
+<footer
+              class="text-center text-lg-start text-white float-start w-100"
+              style="background-color: #0c0e11"
+              >
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <a  href="index.html">
+                  <img src="images/Optical3.png" width="250px" height="63px" class="d-inline-block align-top" alt="Logo">
+                </a>
+                <p>¡Guía cada paso en la construcción de tu red óptica!</p>
+              </div>
+              <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-6">
+                <h6 class="text-uppercase fw-bold">OBJETIVO</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color: rgba(18, 15, 190, 0.952); height: 3px"
+                    />
+                    <p>
+                      Optimizar los procesos concernientes al diseño e instalación de las redes de fibra óptica, con nuestras guías para cada etapa,
+                y el programa de toma de decisiones. Impulsando su funcionamiento y disminuyendo posibles fallas.
+                    </p>
+              </div>
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase fw-bold">CONTACTO</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color:rgba(18, 15, 190, 0.952); height: 3px"
+                    />
+                <p><i class="fas fa-home mr-3"></i> Proyecto realizado para optar al título de Ing. Telecomunicaciones.</p>
+                <p><i class="fas fa-envelope mr-3"></i><img src="./images/logoUjap.svg" alt="Logo Ujap" style="width: 32px; height: 32px;"> Universidad José Antonio Páez.</p>
+                <p><i class="fas fa-phone mr-3"></i><img src="./images/email.png" alt="email"> karibb8900@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+             class="text-center p-2"
+             style="background-color: rgba(4, 3, 100, 0.281)"
+             >
+            <p> &copy;2022 Optical | Karina Bierkamp</p> 
+        </div>
+      </footer>
+
+</html>

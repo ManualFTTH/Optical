@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="El empalme de fibra optica es una técnica para la unión de dos fibras
+    que exige un alto nivel de control del proceso, para garantizar la calidad del mismo, y del enlace 
+    en cuestión, en este apartado se especifica un paso a paso estandarizado para lograr dicho objetivo,
+    independientemente de si es un empalme por fusión o mecánico.">
+    <meta name="keywords" content="Empalme, mecánico, fusión, estándar, proceso, calidad">
+    <meta name= "author" content="Karina Bierkamp">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@284&family=PT+Sans&family=Roboto+Serif:ital,wght@1,500&display=swap');
+        </style>
+    <title>Empalmes</title>
+    <link rel="shorcut icon" href="favicon.png">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/Optical3.png"  height="65px" class="d-inline-block align-top" alt="Logo">
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav text-center">
+          <a class="nav-item nav-link" href="levantamiento.html">Levantamiento </a>
+          <a class="nav-item nav-link" href="diseño.html">Diseño</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Instalación
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="conductos-subconductos.html">Conductos y Subconductos</a></li>
+              <li><a class="dropdown-item" href="conductos-subconductos.html#lubricante">Lubricante</a></li>
+              <li><a class="dropdown-item" href="traccion.html">Cinta y Caja de Tracción</a></li>
+              <li><a class="dropdown-item" href="#">Empalme</a></li>
+              <li><a class="dropdown-item" href="instalacion.html#exteriores">En Exteriores</a></li>
+              <li><a class="dropdown-item" href="instalacion.html#interiores">En Interiores</a></li>
+              <li><a class="dropdown-item" href="terminacion.html">Terminación de Fibra</a></li>
+            </ul>
+          </li>
+          <a class="nav-item nav-link" href="certificacion.html">Certificación</a>
+          <a class="nav-item nav-link" href="software.html">Optical Decisions</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <header class="header-instalacion">
+                <h1 class="titulo-header"><strong>Etapa de Instalación</strong> </h1><br>
+                <p class="subtitulo">Empalmes
+                </p>
+                <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                    style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: #fff;"></path>
+                </svg></div>
+</header>
+<nav class="nav flex-column float-start sticky-top d-none d-xl-block d-lg-block w-40" style="background-color:  rgb(8, 7, 58)">
+  <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;"> --- </a>
+    <a class="nav-link" href="#"style="color:rgb(8, 7, 58) ;"> --- </a>
+  <a class="nav-link active text-light" aria-current="page" href="empalme.html" style="font-size:x-large"><b> Empalmes </a>
+  <a class="nav-link text-light" href="#item-1"style="font-size: large;">Asignación de fibra <br> y ruta</a>
+  <a class="nav-link text-light" href="#item-2"style="font-size: large;">Pelado y exposición <br> del cable</a>
+  <a class="nav-link text-light" href="#item-3"style="font-size: large;">Limpieza y corte <br> del cable</a>
+  <a class="nav-link text-light" href="#item-4"style="font-size: large;">Empalme por fusión</a>
+  <a class="nav-link text-light" href="#item-5"style="font-size: large;">Empalme mecánico</a>
+  <a class="nav-link text-light" href="#item-6"style="font-size: large;">Recomendaciones</a>
+  <a class="nav-link text-light" href="#item-7"style="font-size: large;">Sangrado de Fibra</a>
+    <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+    <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+    <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+    <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+    <a class="nav-link" href="#" style="color:rgb(8, 7, 58) ;">---</a>
+</nav>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-sm-10">
+      <main>
+        El empalme de fibra óptica es la técnica que se utiliza para unir permanentemente 
+            dos fibras ópticas en una conexión de bajas pérdidas, y se puede realizar mediante dos métodos:
+            Empalme por fusión o empalme mecánico. A continuación se sugieren una serie de pasos básicos
+            para realizar un empalme de calidad, según la FOA y Chomycz, B. <br> </main> <br> <br>
+    </div>
+    <div class="col-sm-8">
+      <h4 id="item-1">Asignación de fibra y ruta</h4> <br><br>
+      <p class="pasos-principales">
+        1.	Determine las asignaciones exactas de las fibras ópticas a conectar, identificando cada una, al igual es
+        muy importante planear la ruta exacta de las fibras en las cajas de empalmes desde la entrada del cable a la
+        bandeja de empalme. Asegurándose de que la bandeja de empalme esté equipada con los soportes de fibra adecuados,
+        sean mecánicos, por fusión desnuda, retráctil por calor, etc. <br> <br></p>
+        <h4 id="item-2">Pelado y exposición del cable</h4> <br><br>
+        <p class="pasos-principales">
+        2.	Pele aproximadamente 2 metros de la cubierta exterior del cable (aunque esto depende del tipo de caja de empalme).
+        Utilice el hilo de desgarre para cortar la cubierta a lo largo. A continuación, pele cuidadosamente el cable y exponga
+        el interior. En el caso de que el hilo de desgarre no esté disponible, pele la cubierta con una herramienta de pelado o 
+        una navaja, sin que las fibras se dañen. Corte el exceso de cubierta. Separe los tubos y las protecciones cortando 
+        cuidadosamente cualquier hebra o envoltura. Deje suficiente longitud del miembro de refuerzo para asegurar adecuadamente el
+        cable a la caja de empalme. <br> <br>
+        3.	Para un cable de tubo holgado, pele alrededor de un metro de fibra usando un pelador del tubo protector y exponga las
+        fibras individuales. Para un cable de estructura ajustada asegúrese de que las fibras individuales con sus protecciones de
+        900 micras quedan expuestas y holgadas. <br> <br>
+        4.	Limpie todo el gel del cable de los tubos y protecciones expuestos con la solución de limpieza del gel del cable. <br> <br>
+        5.	Identifique la fibra que se va a empalmar. Utilizando el pelador de recubrimiento adecuado, elimine suficiente recubrimiento
+        de manera que queden expuestos alrededor de 5cm de fibra desnuda. Para un cable de estructura ajustada elimine primero 5cm de la
+        protección con una herramienta peladora de protección de 900 micras y luego elimine 5 cm de recubrimiento con la herramienta de
+        pelado de recubrimiento. Mantenga siempre la herramienta de pelado del recubrimiento perpendicular a la fibra mientras la esté pelando. <br> <br></p>
+        <h4 id="item-3">Limpieza y corte del cable</h4> <br><br>
+        <p class="pasos-principales">
+        6.	Limpie con cuidado la fibra desnuda frotándola en una dirección con una gasa y alcohol libre de residuos. Se recomienda la
+        utilización de guantes para proteger las manos de la solución de limpieza. Tras realizar la limpieza, evita que la fibra desnuda toque
+        cualquier superficie. <br> <br>
+        7.	Prepare la herramienta de cortar y ajuste la longitud de corte que se requiera para la técnica de empalme. <br> <br>
+        8.	Utilice la herramienta de corte y seccione la fibra para obtener una superficie perpendicular. Utilizando las pinzas, deposite
+        inmediatamente el trozo cortado de fibra en un contenedor con tapa diseñado para tal propósito. <br> <br>
+        9.	Pele, limpie, y corte la fibra óptica que se vaya a empalmar. <br> <br>
+        10. </p>
+        <h4 id="item-4">Empalme por fusión</h4> <br><br>
+        <p class="pasos-principales">
+             a) Para el empalme por fusión, sitúe un protector de empalme, si se utiliza, en una de las fibras que se vayan a empalmar.
+                Sitúe ambas fibras en la empalmadora de fusión y siga las instrucciones de empalme de la misma. Un buen empalme será fuerte
+                mecánicamente y tendrá unas pérdidas de unión menores que 0,1dB como indica la empalmadora de fusión. Proteja el empalme con
+                el protector de empalme, que usualmente es del tipo termorretráctil o plegable. <br>
+                A continuación se presenta un vídeo instructivo con una serie de pasos para realizar un empalme por fusión de la forma correcta, con una empalmadora FURUKAWA FITEL 123.<br><br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/o4JoXAnBmFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p> <br><br>
+        <h4 id="item-5">Empalme mecánico</h4> <br>
+        <p class="pasos-principales">
+               b) Para un empalme mecánico, sitúe y alinee las fibras en el conector mecánico. Siga el procedimiento de empalme del fabricante. 
+                Un buen empalme dará unas pérdidas por unión inferiores a las especificadas por el fabricante (típicamente menores que 0,7dB) 
+                y será mecánicamente fuerte. Para evitar que la fibra se rompa debido a un esfuerzo de torsión, asegure, si es posible, el tubo
+                de la fibra en la bandeja de empalmes y luego dé vueltas a la fibra en la bandeja de empalmes para crear una instalación permanente
+                antes de empalmar. <br>En el siguiente vídeo tutorial se demuestra la forma correcta para realizar un empalme mecánico de calidad. <br><br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yovNGSz3uKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </p> <br>
+        <h4 id="item-6"> Recomendaciones </h4> <br><br>
+        <p class="pasos-principales">
+          11.	Tras completar el empalme, colóquelo con cuidado en la bandeja de empalme y dé vueltas a la fibra alrededor de sus guías. Asegúrese
+          de que no se compromete el mínimo radio de curvatura de la fibra y mantenga todos los dobleces tan suaves y largos como sea posible. <br> <br>
+          12.	En este punto se puede realizar una prueba del empalme con el OTDR (o con el medidor de potencia) mientras el equipo de empalme está
+          todavía en el lugar. Rehaga el empalme si fuera necesario. <br> <br>
+          13.	Identifique los siguientes dos cables que se vayan a empalmar y empiece el proceso de nuevo. <br> <br>
+          14.	Después de que hayan sido empalmadas todas las fibras asegure cuidadosamente los tubos de fibra, o los manojos protegidos, a la bandeja
+          de empalme. Enrolle la longitud extra de las fibras individuales alrededor de las guías de la bandeja de empalmes. Cierre la bandeja de
+          empalme y colóquela dentro de la caja de empalme. Asegúrese en todo momento de que no se compromete el radio de curvatura de la fibra. 
+          Enrolle el exceso de tubo de fibra o de fibra protegida alrededor de las abrazaderas de tubo. Asegure el cable de fibra y el miembro de
+          refuerzo a la caja de empalme. Conecte todo a tierra, donde se requiera. <br> <br>
+          15.	Examine el empalme con un OTDR (o un medidor de potencia) en ambas direcciones. <br> <br>
+          16.	Cierre y monte la caja de empalme si todos los empalmes cumplen las especificaciones de ingeniería. <br><br>
+        </p>
+        <h4 id="item-7"> Sangrado de Fibra Óptica </h4> <br><br>
+        <p class="pasos-principales"> 
+          El Sangrado de Fibra es una técnica que permite la extracción de los hilos de un cable de Fibra Óptica o un tubo holgado sin necesidad de hacer un corte transversal y truncar su continuidad. En el siguiente vídeo se demuestra el proceso paso a paso para realizar un sangrado de fibra óptica de calidad.<br> <br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Fwgd5wPIZYY" title="Cómo realizar un correcto sangrado de fibra óptica" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+
+    </div>
+  </div>
+</div>
+<footer
+class="text-center text-lg-start text-white float-start w-100"
+style="background-color: #0c0e11"
+>
+<section class="">
+<div class="container text-center text-md-start mt-5">
+<div class="row mt-3">
+<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+  <a  href="index.html">
+    <img src="images/Optical3.png" width="250px" height="63px" class="d-inline-block align-top" alt="Logo">
+  </a>
+  <p>¡Guía cada paso en la construcción de tu red óptica!</p>
+</div>
+<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-6">
+  <h6 class="text-uppercase fw-bold">OBJETIVO</h6>
+  <hr
+      class="mb-4 mt-0 d-inline-block mx-auto"
+      style="width: 60px; background-color: rgba(18, 15, 190, 0.952); height: 3px"
+      />
+      <p>
+        Optimizar los procesos concernientes al diseño e instalación de las redes de fibra óptica, con nuestras guías para cada etapa,
+  y el programa de toma de decisiones. Impulsando su funcionamiento y disminuyendo posibles fallas.
+      </p>
+</div>
+<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+  <h6 class="text-uppercase fw-bold">CONTACTO</h6>
+  <hr
+      class="mb-4 mt-0 d-inline-block mx-auto"
+      style="width: 60px; background-color:rgba(18, 15, 190, 0.952); height: 3px"
+      />
+  <p><i class="fas fa-home mr-3"></i> Proyecto realizado para optar al título de Ing. Telecomunicaciones.</p>
+  <p><i class="fas fa-envelope mr-3"></i><img src="./images/logoUjap.svg" alt="Logo Ujap" style="width: 32px; height: 32px;"> Universidad José Antonio Páez.</p>
+  <p><i class="fas fa-phone mr-3"></i><img src="./images/email.png" alt="email"> karibb8900@gmail.com</p>
+</div>
+</div>
+</div>
+</section>
+<div
+class="text-center p-2"
+style="background-color: rgba(4, 3, 100, 0.281)"
+>
+<p> &copy;2022 Optical | Karina Bierkamp</p> 
+</div>
+</footer>
+
+
+
+</body>
+</html>  
