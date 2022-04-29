@@ -85,7 +85,7 @@ nav{
     height: 550px;
     width: 100%;
     flex-direction: column;
-    margin-top: 70px;
+    margin-top: 90px;
 }
 .header-diseno{
     background: #00042877;
@@ -102,7 +102,7 @@ nav{
     height: 550px;
     width: auto;
     flex-direction: column;
-    margin-top: 70px;
+    margin-top: 90px;
 }
 .header-instalacion{
     background: #00042877;
@@ -119,7 +119,7 @@ nav{
     height: 550px;
     width: 100%;
     flex-direction: column;
-    margin-top: 70px;
+    margin-top: 90px;
 }
 .header-certificacion{
     background: #00042877;
@@ -136,7 +136,7 @@ nav{
     height: 550px;
     width: 100%;
     flex-direction: column;
-    margin-top: 70px;
+    margin-top: 90px;
 }
 main{
     font-weight: 500;
@@ -172,3 +172,27 @@ a:hover{
 .background-primary{
     background-color: var(--primary)!important;
 }
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+}    
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ }
+.encabezado{
+    position: relative;
+    text-align: end;
+    color:white;
+    font-family: 'Noto Serif Display', serif;
+    width:max-content;
+    line-height: 0%;
+}  
