@@ -11,6 +11,15 @@
     <link rel="stylesheet" href="CSS/estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+      </script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@284&family=PT+Sans&family=Roboto+Serif:ital,wght@1,500&display=swap');
       </style>
@@ -106,7 +115,7 @@
     </div>
     <div class="col-sm-8">
       <h4 id="item-1"> En exteriores </h4>
-      <h5 id="item-2"><strong> Directamente enterrado </strong></h5> <br><br>
+      <h5 id="item-2"><strong> Directamente enterrado </strong></h5>
       <p class="pasos-principales">
         1. Es estrictamente necesario que previamente se investiguen las condiciones de los sedimentos a lo
                    largo de la ruta del cable, incluyendo si ya existe un cableado subterráneo en el aérea, y todo tipo de
@@ -143,7 +152,8 @@
                      terminales y a la entrada de los edificios. <br> <br>
       </p>
       <center><img class="img-fluid" src="./images/Zanja del cable.png" alt="Estructura de Zanja" title="Estructura de Zanja"> <br></center> 
-      <h4 id="item-3">Por conductos o sistemas de canalización </h4> <br><br>
+        <p style="text-align: center; font-size: smaller;"> <b>Indicaciones de zanjado para el cableado.</b><br> <b> Fuente: </b>Chomycz, B (2001) </p>
+      <h4 id="item-3">Por conductos o sistemas de canalización </h4>
       <p class="pasos-principales">
         Consiste en la colocación del cable de fibra en conductos ya existentes, nuevos, o canalizaciones,
         las llamadas tanquillas o vías generales de telecomunicaciones. <br>
@@ -169,7 +179,8 @@
           <li>-	Se debe instalar en la arqueta de alimentación un collar lubricante y un tubo de alimentación.</li>
           <li>-	Se deberá instalar en la arqueta de tendido una polea de tamaño adecuado</li>
           Más o menos debería quedar un sistema de tracción de la siguiente manera: <br><br>
-          <center><img class="img-fluid" src="./images/Sistema de traccion de cable.PNG" alt="Sistema de Tracción" title="Sistema de Tracción"></center>  
+          <center><img class="img-fluid" src="./images/Sistema de traccion de cable.PNG" alt="Sistema de Tracción" title="Sistema de Tracción"></center>
+            <p style="text-align: center; font-size: smaller;"> <b> Sistema de tracción del cable.</b><br> <b> Fuente: </b>Chomycz, B (2001) </p>
         </ul>
       </p>
     </div>
@@ -211,7 +222,7 @@
           18.	Como sugerencia se recomienda realizar un etiquetado de cada cable de fibra y situarlo en cada tanquilla, donde se identifique el tipo de
            cable, propietario y número de teléfono del propietario. <br> <br>
         </p>
-        <h4 id="item-4">Vía aérea</h4> <br><br>
+        <h4 id="item-4">Vía aérea</h4>
        <p class="pasos-principales"> 1.	En primer lugar se enumeran las líneas de seguridad para una instalación aérea: <br> <br></p>
         <ul style="list-style-type: none">
           <li>-	Asegurarse de que todo el personal ha sido preparado adecuadamente para trabajar en postes o torres eléctricas.</li>
@@ -238,6 +249,15 @@
           abrazadera y se forma con el cable un lazo de expansión. Que según Chomycz (2011) la longitud de la vuelta del lazo D debería ser dos veces mayor que su
           profundidad R, y que el radio de curvatura mínimo del cable. Los cables autosoportados no requieren lazos de expansión. <br>  <br>
          <center> <img class="img-fluid" src="./images/Lazo de expansion.PNG" alt="Lazo de Expansión" title="Lazo de Expansión"> <br><br></center></p>
+        <p style="text-align: center; font-size: smaller;"> <b> Lazo de expansión para instalación aérea.</b><br> <b> Fuente: </b>Chomycz, B (2001) </p>
+        <div class="row">
+           <div class="col-sm-9 text-center">
+             <p>$D=2\cdot R$</p>
+           </div>
+           <div class="col-sm-2 text-end">
+             <p>$Ec. 4.3$</p>
+           </div>
+         </div>
          <p class="pasos-principales">
           7.	Comenzar la operación de estirar a mano tirando del fijador a una velocidad constante y conduciendo el vehículo que lleva el carrete de tal manera que
           este a 50 pies del fijador. Mantener una ligera tensión sobre el cable y el carrete del cable por debajo del fiador en todo momento, para evitar que el cable
@@ -248,7 +268,7 @@
          </p>
          <a name="interiores"></a>
          <h4 id="item-5">En Interiores</h4>
-         <h5 id="item-6">Cableado vertical</h4><br><br>
+         <h5 id="item-6">Cableado vertical</h4>
          <p class="pasos-principales">
           1.	Una consideración importante en las instalaciones verticales es que el peso del cable crea por sí mismo una tensión de carga sobre él, que no debería exceder
           la máxima permitida por el fabricante, la sujeción del cable a un soporte en puntos intermedios puede reducir la carga de tensión del cable.
