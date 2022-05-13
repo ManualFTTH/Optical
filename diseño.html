@@ -135,7 +135,14 @@
     <p>$OI$: $Oferta$ $inicial$ $de$ $cubrimiento.$</p>
     <p>$HP$: $Total$ $de$ $viviendas$ $en$ $la$ $zona$ $levantada.$</p>
     <p>$p$: $Porcentaje$ $inicial$ $de$ $cubrimiento.$</p>
-    <p class="text-center">$OI= HP\cdot p$</p> <!--ARREGLAR-->
+   <div class="row">
+      <div class="col-sm-9">
+        <p class="text-center">$OI= HP\cdot p$</p>
+      </div>
+      <div class="col-sm-2 text-end">
+       <p> $Ec. 2.0 $</p>
+      </div>
+    </div>
        <br>
       Ejemplo: <br>
        HP: 50; p: 30% <br>
@@ -209,8 +216,23 @@
            <p>$P$: $Cantidad$ $de$ $puertos$ $requeridos.$ <br></p>
            <p>$S_{1}$: $Splitter$ $de$ $primer$ $nivel.$ <br></p>
            <p>$S_{2}$: $Splitter$ $de$ $segundo$ $nivel.$ <br> <br></p>
-          <p class="text-center"> $S_{2}=\dfrac{P}{N}$</p>  <br> <br> 
-           <p class="text-center">$S_{1}= \dfrac{S_{2}}{n}$</p> <br><br></p> 
+          <div class="row">
+             <div class="col-sm-9 text-center">
+              <p> $S_{2}=\dfrac{P}{N}$</p>
+             </div>
+             <div class="col-sm-2 text-end">
+               <p>$Ec. 2.1$</p>
+             </div>
+           </div>
+           <div class="row">
+            <div class="col-sm-9 text-center">
+              <p>$S_{1}= \dfrac{S_{2}}{n}$</p>
+            </div>
+            <div class="col-sm-2 text-end">
+              <p>$Ec. 2.2$</p>
+            </div>
+          </div>
+        </p> 
         <p class="pasos-principales">
           En algunas ocasiones, se deben considerar los siguientes aspectos: <br><br>
           -   Cuando S1 es decimal, y el decimal es menor a 5, se sugiere que se redondee por debajo,
@@ -337,7 +359,14 @@
                     <center> 
                         $T_{x}$: $Potencia$ $máxima$ $de$ $transmisión$ $de$ $la$ $OLT$. <br>
                         $R_{x}$: $Sensibilidad$ $de$ $recepción$ $mínima$ $en$ $la$ $ONT$. <br><br>
-                        $Presupuesto$ $de$ $potencia$ $óptica$ = $R_{x}$ - $T_{x}$
+                       <div class="row">
+                          <div class="col-sm-9 text-center">
+                            <p>$Presupuesto$ $de$ $potencia$ $óptica$ = $R_{x}$ - $T_{x}$</p>
+                          </div>
+                          <div class="col-sm-2 text-end">
+                            <p>$Ec. 2.3$</p>
+                          </div>
+                        </div>
                     </center> <br>
                     Este parámetro indica el límite de pérdidas que tolera la red, sin embargo, una práctica recomendada 
                     es que haya un margen de resguardo que maneje la empresa, siendo optimo unos +3dB, esto quiere decir 
@@ -394,7 +423,14 @@
                              
                             <center><img class="img-fluid" src="./images/Perdida por Splitters.PNG" alt="Atenuación por Splitter" title="Atenuación por Splitter"></center>
                             <p style="text-align: center; font-size: smaller;"> <b> Atenuación según división de Splitters</b><br> <b> Fuente: </b>Bierkamp, K. (2022) </p>   
-                           <p style="text-align: center;"> $Presupuesto$ $de$ $pérdida$ = $d\cdot F + n \cdot E + n \cdot C +  n \cdot S $</p>  <br>
+                           <div class="row">
+                             <div class="col-sm-9 text-center">
+                              <p style="text-align: center;"> $Presupuesto$ $de$ $pérdida$ = $d\cdot F + n \cdot E + n \cdot C +  n \cdot S $</p>
+                             </div>
+                             <div class="col-sm-2 text-end">
+                               $Ec. 2.4$
+                             </div>
+                           </div>
                            <p style="text-align: start;"> $n:$ Cantidad del elemento.</p>
                            <p style="text-align: start;"> $d:$ Distancia del enlace.</p>
                            <p style="text-align: start;"> $F:$ Atenuación (dB/Km) según el tipo de fibra.</p>
